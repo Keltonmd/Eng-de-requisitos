@@ -4,7 +4,7 @@ Este repositório foi criado como parte de uma atividade para a disciplina de An
 
 ## Propósito
 
-O objetivo deste repositório é fornecer exemplos de como registrar e organizar requisitos para um sistema de supermercado. Os exemplos são apresentados em formato Markdown e incluem diferentes abordagens de documentação.
+O objetivo deste repositório é fornecer exemplos de como registrar e organizar requisitos. Embora o sistema de supermercado tenha sido utilizado como exemplo, as abordagens e técnicas apresentadas podem ser aplicadas a qualquer tipo de sistema ou projeto.
 
 ## Autores dos Exemplos
 
