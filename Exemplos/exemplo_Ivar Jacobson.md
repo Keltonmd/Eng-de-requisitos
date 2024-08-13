@@ -16,7 +16,7 @@
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](Caso de uso SuperMercado.png)
+![Diagrama de Casos de Uso](Caso_de_uso_SuperMercado.png)
 
 _O diagrama acima representa os principais casos de uso para um sistema de gerenciamento de supermercado._
 
