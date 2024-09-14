@@ -832,13 +832,9 @@
 * **E1**: Produto fora do prazo de devolução.  
   1. O sistema informa que o produto excedeu o prazo permitido para devolução.  
   2. O operador comunica o cliente sobre as políticas da loja e oferece alternativas, como troca ou reparo.
-
 * **E2**: Falha no estorno de cartão.  
-  1. O sistema informa que houve uma falha
-
- ao tentar processar o estorno.  
+  1. O sistema informa que houve uma falha ao tentar processar o estorno.  
   2. O operador tenta novamente ou oferece outro método de reembolso ao cliente.
-
 * **E3**: Produto não elegível para devolução.  
   1. O sistema informa que o produto não pode ser devolvido (ex.: produtos em promoção final, danificados por mau uso).  
   2. O operador informa o cliente sobre as restrições e, se aplicável, oferece alternativas como troca ou reparo.
