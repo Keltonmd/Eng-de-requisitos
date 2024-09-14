@@ -291,3 +291,305 @@
 * **E1**: O sistema não encontra vendas para o período especificado.  
   1. O operador ou gerente verifica se os filtros de pesquisa estão corretos.  
   2. Se não houver erro nos filtros, o sistema informa que não há registros para o período.
+* **E2**: Falha ao gerar o relatório.  
+  1. O sistema informa o erro ao usuário e tenta gerar o relatório novamente.  
+  2. Se a falha persistir, o operador ou gerente é orientado a contatar o suporte técnico.
+* **E3**: O formato de exportação selecionado não é suportado.  
+  1. O sistema exibe uma mensagem de erro ao usuário.  
+  2. O usuário escolhe outro formato de exportação (por exemplo, de CSV para PDF).
+
+---
+
+## UC05: Gerenciar Estoque
+
+### Ator(es):
+* Operador de estoque
+* Gerente da loja
+
+### Interessado(s) e interesse(s):
+* **Operador de estoque**: Monitorar a quantidade de produtos disponíveis e realizar ajustes, como adicionar novos itens ou remover itens obsoletos.
+* **Gerente da loja**: Garantir que o estoque esteja bem organizado e atualizado, permitindo a reposição eficiente e a gestão adequada de produtos.
+
+### Pré-condições:
+* O sistema de gerenciamento de estoque deve estar disponível e acessível.
+* O operador deve ter permissões adequadas para modificar o estoque.
+
+### Pós-condições:
+* O estoque é atualizado conforme as ações realizadas (adição, remoção ou ajuste de quantidades).
+* Relatórios de estoque podem ser gerados para análise.
+
+### Questões em aberto:
+* Existe uma função de aviso para alertar quando certos produtos atingem níveis mínimos de estoque?
+* O sistema permite importação de dados de inventário em massa?
+
+### Fluxo Principal:
+
+1. O operador de estoque acessa a funcionalidade de gerenciamento de estoque no sistema.
+2. [IN] O operador seleciona a opção de adicionar, remover ou ajustar a quantidade de um produto específico.
+3. [OUT] O sistema exibe uma lista de produtos cadastrados e suas respectivas quantidades.
+4. [IN] O operador busca o produto desejado e seleciona a ação necessária (adição, remoção ou ajuste de quantidade).
+5. [OUT] O sistema registra a ação e atualiza o inventário com as novas informações.
+6. [IN] O operador confirma a operação e o sistema finaliza a atualização do estoque.
+
+### Variantes:
+
+**6.1 Adição de novo produto**  
+6.1.1. O operador seleciona a opção de adicionar um novo produto ao sistema.  
+6.1.2. O sistema solicita informações sobre o produto (nome, código de barras, preço, categoria, etc.).  
+6.1.3. O operador insere as informações necessárias.  
+6.1.4. O sistema adiciona o novo produto ao inventário.
+
+**6.2 Remoção de produto obsoleto**  
+6.2.1. O operador seleciona a opção de remover um produto do sistema.  
+6.2.2. O sistema solicita a confirmação da remoção.  
+6.2.3. O operador confirma a remoção, e o produto é excluído do inventário.
+
+**6.3 Ajuste de quantidade**  
+6.3.1. O operador acessa a opção de ajustar a quantidade de um produto no estoque.  
+6.3.2. O operador insere o novo valor de quantidade.  
+6.3.3. O sistema atualiza o inventário com a nova quantidade do produto.
+
+### Exceções:
+
+* **E1**: O sistema falha ao atualizar o estoque.  
+  1. O operador tenta realizar a operação novamente.  
+  2. Se a falha persistir, o operador informa ao gerente e ao suporte técnico.
+
+* **E2**: Produto não encontrado no sistema.  
+  1. O operador verifica se o produto está cadastrado corretamente.  
+  2. Caso não esteja, o operador deve registrar o produto antes de realizar a ação desejada.
+
+* **E3**: Quantidade inserida é inválida (ex.: valor negativo).  
+  1. O sistema exibe uma mensagem de erro informando que a quantidade inserida não é válida.  
+  2. O operador deve corrigir o valor inserido e tentar novamente.
+
+---
+
+## UC06: Aplicar Desconto
+
+### Ator(es):
+* Operador do caixa
+
+### Interessado(s) e interesse(s):
+* **Cliente**: Obter desconto no valor total da compra (por promoções ou outros critérios definidos pela loja).
+* **Operador do caixa**: Aplicar corretamente os descontos de acordo com as políticas da loja.
+
+### Pré-condições:
+* A compra deve estar em andamento no sistema, com todos os produtos registrados.
+* O operador do caixa deve ter permissão para aplicar descontos.
+
+### Pós-condições:
+* O valor total da compra é ajustado conforme o desconto aplicado.
+* O desconto é registrado no sistema para fins de auditoria.
+
+### Questões em aberto:
+* Quais são os limites de desconto que o operador pode aplicar?  
+* O desconto é percentual ou valor fixo?
+
+### Fluxo Principal:
+
+1. O cliente solicita um desconto ao operador do caixa.
+2. [IN] O operador acessa a opção de aplicar desconto no sistema de vendas.
+3. [OUT] O sistema exibe as opções de desconto (por exemplo, desconto em percentual ou valor fixo).
+4. [IN] O operador escolhe a opção adequada e insere o valor ou percentual do desconto.
+5. [OUT] O sistema calcula o novo valor total da compra, considerando o desconto.
+6. [IN] O operador confirma o desconto aplicado.
+7. [OUT] O sistema registra o desconto no histórico da venda e exibe o valor final ao cliente.
+
+### Variantes:
+
+**6.1 Desconto percentual**  
+6.1.1. O operador seleciona a opção de aplicar um desconto percentual.  
+6.1.2. O sistema solicita o percentual a ser aplicado.  
+6.1.3. O operador insere o percentual, e o sistema recalcula o valor total da compra.
+
+**6.2 Desconto em valor fixo**  
+6.2.1. O operador seleciona a opção de aplicar um desconto em valor fixo.  
+6.2.2. O sistema solicita o valor do desconto a ser aplicado.  
+6.2.3. O operador insere o valor, e o sistema ajusta o valor total da compra.
+
+### Exceções:
+
+* **E1**: O sistema não aceita o desconto inserido (ex.: valor fora dos limites permitidos).  
+  1. O sistema informa ao operador que o desconto não é válido.  
+  2. O operador ajusta o valor ou percentual conforme as políticas da loja e tenta novamente.
+
+* **E2**: O sistema falha ao calcular o valor total após aplicar o desconto.  
+  1. O operador do caixa tenta recalcular o valor.  
+  2. Se o erro persistir, o operador deve reportar o problema ao suporte técnico e continuar a venda sem o desconto até que o problema seja resolvido.
+
+* **E3**: O cliente não aceita o valor final com desconto aplicado.  
+  1. O operador pode oferecer outra solução ou reverter o desconto, se aplicável.
+
+## UC07: Gerar Relatório de Vendas
+
+### Ator(es):
+* Gerente da loja
+* Operador do caixa
+
+### Interessado(s) e interesse(s):
+* **Gerente da loja**: Acompanhar o desempenho de vendas, identificar tendências e tomar decisões estratégicas com base nos dados gerados.
+* **Operador do caixa**: Facilitar a geração de relatórios operacionais para auditorias ou análises diárias.
+
+### Pré-condições:
+* O sistema de vendas deve estar funcionando corretamente e possuir acesso aos dados de transações.
+* O usuário deve ter permissão para acessar e gerar relatórios.
+
+### Pós-condições:
+* O relatório é gerado com sucesso e pode ser exportado, impresso ou salvo para futuras análises.
+
+### Questões em aberto:
+* Quais tipos de relatórios o sistema permite gerar? (ex.: vendas diárias, mensais, por categoria de produto)
+* O sistema gera gráficos e estatísticas ou apenas dados brutos?
+
+### Fluxo Principal:
+
+1. O gerente ou operador acessa a funcionalidade de relatórios no sistema.
+2. [IN] O usuário seleciona o tipo de relatório desejado (ex.: relatório diário de vendas, relatório de produtos mais vendidos).
+3. [OUT] O sistema solicita os parâmetros de geração do relatório (ex.: período, filtro por categoria ou operador).
+4. [IN] O usuário insere os parâmetros e confirma a geração do relatório.
+5. [OUT] O sistema processa os dados e gera o relatório solicitado.
+6. [OUT] O relatório é exibido na tela para visualização.
+7. [IN] O usuário pode optar por exportar o relatório ou imprimi-lo.
+
+### Variantes:
+
+**6.1 Exportação de relatório**  
+6.1.1. O usuário escolhe a opção de exportar o relatório.  
+6.1.2. O sistema oferece opções de formato (ex.: PDF, CSV, Excel).  
+6.1.3. O usuário seleciona o formato e confirma a exportação.  
+6.1.4. O sistema gera o arquivo e disponibiliza para download.
+
+**6.2 Impressão de relatório**  
+6.2.1. O usuário seleciona a opção de imprimir o relatório.  
+6.2.2. O sistema prepara o relatório para impressão.  
+6.2.3. O relatório é enviado para a impressora configurada.
+
+### Exceções:
+
+* **E1**: Falha ao gerar o relatório.  
+  1. O sistema exibe uma mensagem de erro ao usuário e sugere tentar novamente.  
+  2. Se a falha persistir, o usuário deve contatar o suporte técnico.
+
+* **E2**: Relatório gerado sem dados.  
+  1. O sistema informa ao usuário que não há dados para o período ou parâmetros inseridos.  
+  2. O usuário pode modificar os parâmetros e tentar gerar o relatório novamente.
+
+* **E3**: Falha ao exportar o relatório.  
+  1. O sistema exibe uma mensagem de erro informando o problema ao usuário.  
+  2. O usuário pode tentar outro formato de exportação ou reiniciar o processo.
+
+---
+
+## UC08: Repor Estoque
+
+### Ator(es):
+* Operador de estoque
+* Gerente da loja
+* Fornecedor (externo ao sistema)
+
+### Interessado(s) e interesse(s):
+* **Operador de estoque**: Garantir que os produtos estejam disponíveis para venda, monitorando os níveis de estoque e iniciando a reposição quando necessário.
+* **Gerente da loja**: Coordenar o processo de reposição de estoque, analisando as demandas e evitando faltas ou excessos de produtos.
+* **Fornecedor**: Receber e processar os pedidos de reposição, garantindo o envio de mercadorias conforme acordado.
+
+### Pré-condições:
+* O sistema de gerenciamento de estoque deve estar funcional e atualizado com os níveis atuais de produtos.
+* O operador de estoque ou gerente deve ter permissão para realizar pedidos de reposição.
+
+### Pós-condições:
+* O pedido de reposição é registrado no sistema, e o estoque é atualizado após o recebimento das mercadorias.
+* O sistema registra o pedido e o status da reposição.
+
+### Questões em aberto:
+* O sistema permite a integração com fornecedores para pedidos automáticos?
+* Quais notificações o sistema gera quando o nível de estoque atinge o mínimo?
+
+### Fluxo Principal:
+
+1. O operador de estoque ou gerente acessa a funcionalidade de reposição no sistema.
+2. [IN] O usuário consulta os produtos cujo estoque está abaixo do mínimo permitido.
+3. [OUT] O sistema exibe a lista de produtos que necessitam de reposição.
+4. [IN] O operador ou gerente seleciona os produtos a serem repostos.
+5. [OUT] O sistema calcula a quantidade necessária com base nos parâmetros de estoque mínimo e máximo.
+6. [IN] O operador confirma o pedido de reposição.
+7. [OUT] O sistema registra o pedido e o envia ao fornecedor (se integrado).
+8. [OUT] O sistema atualiza o status do pedido, aguardando o recebimento da mercadoria.
+
+### Variantes:
+
+**6.1 Reposição manual**  
+6.1.1. O operador seleciona a opção de reposição manual, onde define a quantidade de reposição sem base nos níveis calculados pelo sistema.  
+6.1.2. O sistema atualiza o pedido conforme a quantidade definida manualmente.  
+6.1.3. O pedido é registrado no sistema e enviado ao fornecedor.
+
+**6.2 Reposição automática**  
+6.2.1. O sistema identifica automaticamente os produtos abaixo do nível mínimo e sugere o pedido de reposição.  
+6.2.2. O operador revisa o pedido sugerido e confirma.  
+6.2.3. O sistema processa automaticamente o pedido com o fornecedor.
+
+### Exceções:
+
+* **E1**: Produto não disponível no fornecedor.  
+  1. O sistema informa ao operador que o fornecedor não possui o produto em estoque.  
+  2. O operador deve buscar outra opção de fornecedor ou esperar a reposição do fornecedor original.
+
+* **E2**: Falha na comunicação com o fornecedor.  
+  1. O sistema exibe uma mensagem de erro informando a falha no envio do pedido.  
+  2. O operador tenta reenviar o pedido ou contata o fornecedor diretamente.
+
+* **E3**: Pedido de reposição excede o limite máximo de estoque.  
+  1. O sistema informa que a quantidade solicitada excede a capacidade de estoque da loja.  
+  2. O operador ajusta o pedido para atender aos limites de estoque.
+
+---
+
+## UC09: Registrar Cliente
+
+### Ator(es):
+* Operador do caixa
+* Cliente
+
+### Interessado(s) e interesse(s):
+* **Cliente**: Ser registrado no sistema para obter benefícios, como participação em programas de fidelidade, promoções e histórico de compras.
+* **Operador do caixa**: Registrar as informações do cliente de forma rápida e correta, garantindo que ele receba os benefícios oferecidos pela loja.
+
+### Pré-condições:
+* O sistema de registro de clientes deve estar disponível e funcional.
+* O operador deve ter acesso à funcionalidade de cadastro de clientes.
+
+### Pós-condições:
+* O cliente é registrado no sistema com todos os seus dados pessoais e preferências.
+* O cliente recebe um identificador exclusivo para futuras compras.
+
+### Questões em aberto:
+* Quais dados são obrigatórios para o registro? (ex.: nome, CPF, e-mail)
+* O sistema permite associar o cliente a programas de fidelidade ou promoções automaticamente?
+
+### Fluxo Principal:
+
+1. O cliente solicita o registro no sistema de clientes.
+2. [IN] O operador acessa a funcionalidade de registro de clientes no sistema.
+3. [OUT] O sistema solicita as informações do cliente (ex.: nome, CPF, e-mail, telefone).
+4. [IN] O operador insere os dados do cliente.
+5. [OUT] O sistema valida as informações inseridas.
+6. [OUT] O cliente é registrado e recebe um identificador único (cartão fidelidade, QR code, etc.).
+7. [IN] O operador finaliza o processo de registro, e o sistema confirma a inclusão do cliente.
+
+### Variantes:
+
+**6.1 Registro com programa de fidelidade**  
+6.1.1. O operador associa o cliente a um programa de fidelidade durante o registro.  
+6.1.2. O sistema atualiza o cadastro do cliente com os benefícios do programa.  
+6.1.3. O cliente começa a acumular pontos ou receber descontos em compras futuras.
+
+### Exceções:
+
+* **E1**: Falha ao validar os dados do cliente (ex.: CPF inválido).  
+  1. O sistema informa o erro ao operador, que corrige os dados inseridos.  
+  2. Se o erro persistir, o operador orienta o cliente a verificar seus dados e tenta novamente.
+
+* **E2**: Cliente já registrado no sistema.  
+  1. O sistema informa que o cliente já possui um registro ativo.  
+  2. O operador verifica os dados e, se necessário, atualiza o cadastro existente.
+  
