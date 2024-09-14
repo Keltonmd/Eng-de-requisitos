@@ -592,4 +592,253 @@
 * **E2**: Cliente já registrado no sistema.  
   1. O sistema informa que o cliente já possui um registro ativo.  
   2. O operador verifica os dados e, se necessário, atualiza o cadastro existente.
-  
+* **E3**: Falha no sistema durante o registro.  
+  1. O operador informa ao cliente sobre o erro e tenta novamente realizar o registro.  
+  2. Se a falha persistir, o operador orienta o cliente a retornar mais tarde e reporta o problema ao suporte técnico.
+
+---
+
+## UC10: Emitir Nota Fiscal
+
+### Ator(es):
+* Operador do caixa
+* Cliente
+
+### Interessado(s) e interesse(s):
+* **Cliente**: Receber a nota fiscal de sua compra para fins de garantia, troca ou dedução de impostos.
+* **Operador do caixa**: Emitir corretamente a nota fiscal, garantindo que os dados da compra e do cliente estejam completos e corretos.
+
+### Pré-condições:
+* A compra deve ter sido finalizada e registrada no sistema.
+* O sistema de emissão de nota fiscal deve estar integrado ao sistema de vendas.
+
+### Pós-condições:
+* A nota fiscal é gerada e entregue ao cliente.
+* O sistema registra a emissão da nota fiscal para fins contábeis e fiscais.
+
+### Questões em aberto:
+* O sistema permite a emissão de notas fiscais eletrônicas (NF-e)?
+* Existe a possibilidade de enviar a nota fiscal por e-mail ou apenas imprimi-la?
+
+### Fluxo Principal:
+
+1. Após a finalização da compra, o cliente solicita a emissão da nota fiscal.
+2. [IN] O operador do caixa acessa a funcionalidade de emissão de nota fiscal no sistema.
+3. [OUT] O sistema solicita os dados do cliente (ex.: CPF, CNPJ, endereço).
+4. [IN] O operador insere ou confirma os dados do cliente no sistema.
+5. [OUT] O sistema gera a nota fiscal com base nas informações da compra e do cliente.
+6. [OUT] O sistema exibe a nota fiscal para revisão e confirmação.
+7. [IN] O operador confirma a emissão da nota fiscal.
+8. [OUT] A nota fiscal é emitida e entregue ao cliente, seja impressa ou enviada por e-mail.
+
+### Variantes:
+
+**6.1 Envio de nota fiscal por e-mail**  
+6.1.1. O operador pergunta ao cliente se deseja receber a nota fiscal por e-mail.  
+6.1.2. O cliente fornece o e-mail, e o operador insere o endereço no sistema.  
+6.1.3. O sistema gera a nota fiscal eletrônica (NF-e) e a envia automaticamente para o e-mail fornecido.
+
+**6.2 Impressão da nota fiscal**  
+6.2.1. O operador seleciona a opção de imprimir a nota fiscal.  
+6.2.2. O sistema prepara a nota fiscal para impressão.  
+6.2.3. A nota fiscal é enviada para a impressora, e o operador a entrega ao cliente.
+
+### Exceções:
+
+* **E1**: Falha ao gerar a nota fiscal.  
+  1. O sistema informa ao operador sobre a falha e tenta gerar a nota fiscal novamente.  
+  2. Se a falha persistir, o operador orienta o cliente a contatar o suporte técnico da loja ou emitir a nota fiscal posteriormente.
+
+* **E2**: Dados do cliente incorretos ou incompletos.  
+  1. O sistema exibe um aviso de erro e solicita a correção dos dados.  
+  2. O operador corrige as informações e tenta emitir a nota fiscal novamente.
+
+* **E3**: Falha ao enviar a nota fiscal por e-mail.  
+  1. O sistema informa ao operador que o envio por e-mail falhou.  
+  2. O operador pergunta ao cliente se deseja receber a nota fiscal impressa ou se o envio deve ser tentado novamente.
+## UC11: Gerenciar Preços de Produtos
+
+### Ator(es):
+* Gerente da loja
+* Operador do sistema
+
+### Interessado(s) e interesse(s):
+* **Gerente da loja**: Garantir que os preços dos produtos estejam atualizados e de acordo com as políticas da loja, promoções e fornecedores.
+* **Operador do sistema**: Facilitar a inserção e atualização de preços no sistema para garantir que as operações de venda reflitam os preços corretos.
+
+### Pré-condições:
+* O sistema de gerenciamento de preços deve estar disponível e funcional.
+* O usuário deve ter permissão para alterar os preços dos produtos.
+
+### Pós-condições:
+* Os preços dos produtos são atualizados no sistema e refletem-se imediatamente nas vendas.
+* O sistema mantém um histórico das alterações de preços para futuras auditorias.
+
+### Questões em aberto:
+* O sistema permite agendar mudanças de preço? (ex.: para promoções futuras)
+* Existe algum limite de alteração de preço em relação ao valor anterior?
+
+### Fluxo Principal:
+
+1. O gerente ou operador acessa a funcionalidade de gerenciamento de preços no sistema.
+2. [IN] O usuário consulta a lista de produtos ou busca um produto específico.
+3. [OUT] O sistema exibe o preço atual do produto selecionado.
+4. [IN] O usuário insere o novo preço do produto.
+5. [OUT] O sistema valida a alteração de preço conforme regras internas (ex.: limites mínimos ou máximos permitidos).
+6. [OUT] O preço do produto é atualizado e refletido no sistema de vendas.
+7. [IN] O usuário confirma a atualização do preço.
+
+### Variantes:
+
+**6.1 Alteração em lote de preços**  
+6.1.1. O operador seleciona múltiplos produtos para atualização simultânea.  
+6.1.2. O sistema permite a inserção de novos preços para todos os produtos selecionados.  
+6.1.3. O sistema atualiza os preços em lote e confirma a operação.
+
+**6.2 Agendamento de alteração de preços**  
+6.2.1. O operador escolhe a opção de agendar uma alteração de preço para uma data futura (ex.: início de promoção).  
+6.2.2. O sistema registra a alteração e ativa os novos preços automaticamente na data programada.
+
+### Exceções:
+
+* **E1**: Falha ao validar o novo preço.  
+  1. O sistema informa ao operador que o preço inserido não atende às regras (ex.: abaixo do mínimo permitido).  
+  2. O operador ajusta o preço conforme as regras estabelecidas ou solicita aprovação especial do gerente.
+
+* **E2**: Falha na atualização de preços.  
+  1. O sistema informa ao operador que houve uma falha na atualização, como problemas de conexão com o banco de dados.  
+  2. O operador tenta novamente ou contata o suporte técnico.
+
+* **E3**: Produto inexistente.  
+  1. O sistema informa que o produto inserido não está cadastrado no sistema.  
+  2. O operador revisa os dados do produto ou realiza o cadastro antes de atualizar o preço.
+
+---
+
+## UC12: Aplicar Promoções
+
+### Ator(es):
+* Gerente da loja
+* Operador do sistema
+* Cliente
+
+### Interessado(s) e interesse(s):
+* **Gerente da loja**: Implementar promoções para aumentar as vendas de determinados produtos, girar estoque ou atrair mais clientes.
+* **Operador do sistema**: Facilitar a inserção de promoções no sistema para garantir que os clientes aproveitem os descontos oferecidos.
+* **Cliente**: Obter vantagens nas compras durante o período promocional.
+
+### Pré-condições:
+* O sistema de vendas deve estar integrado com a funcionalidade de promoções.
+* O usuário deve ter permissão para cadastrar promoções.
+
+### Pós-condições:
+* A promoção é aplicada aos produtos no sistema e refletida automaticamente nas vendas.
+* O sistema registra as promoções aplicadas para futuras análises de desempenho.
+
+### Questões em aberto:
+* As promoções podem ser aplicadas automaticamente em determinados horários ou dias?
+* O sistema permite combinações de promoções (ex.: descontos acumulativos)?
+
+### Fluxo Principal:
+
+1. O gerente ou operador acessa a funcionalidade de promoções no sistema.
+2. [IN] O usuário seleciona os produtos ou categorias a serem incluídos na promoção.
+3. [OUT] O sistema solicita os parâmetros da promoção (ex.: desconto percentual, preço fixo, datas de início e fim).
+4. [IN] O operador insere as informações da promoção e confirma.
+5. [OUT] O sistema valida a promoção e atualiza os preços dos produtos afetados.
+6. [OUT] O sistema exibe os produtos promocionados na tela de vendas, destacando os descontos.
+7. [IN] O operador finaliza o cadastro da promoção.
+
+### Variantes:
+
+**6.1 Promoção por tempo limitado**  
+6.1.1. O operador define um período específico para a promoção (ex.: promoção válida apenas no final de semana).  
+6.1.2. O sistema ativa a promoção automaticamente no período definido e desativa ao final.
+
+**6.2 Promoção com regras especiais**  
+6.2.1. O operador define regras adicionais para a promoção, como "compre 1, leve 2" ou descontos progressivos.  
+6.2.2. O sistema aplica as regras automaticamente ao realizar as vendas.
+
+### Exceções:
+
+* **E1**: Promoção conflitante com outra ativa.  
+  1. O sistema informa ao operador que a promoção inserida entra em conflito com outra já existente (ex.: produtos com descontos diferentes).  
+  2. O operador ajusta a promoção ou revê as promoções ativas.
+
+* **E2**: Falha ao aplicar a promoção.  
+  1. O sistema informa ao operador que houve uma falha ao tentar aplicar a promoção nos produtos selecionados.  
+  2. O operador tenta novamente ou contata o suporte técnico.
+
+* **E3**: Produto fora da promoção.  
+  1. O sistema informa que um ou mais produtos selecionados não são elegíveis para a promoção (ex.: produtos em fim de estoque).  
+  2. O operador revisa os produtos ou ajusta as regras da promoção.
+
+---
+
+## UC13: Gerenciar Devoluções de Produtos
+
+### Ator(es):
+* Operador do caixa
+* Cliente
+* Gerente da loja
+
+### Interessado(s) e interesse(s):
+* **Cliente**: Devolver produtos defeituosos ou indesejados de acordo com as políticas da loja.
+* **Operador do caixa**: Facilitar o processo de devolução, registrando corretamente o item devolvido e gerando o reembolso ou troca.
+* **Gerente da loja**: Supervisionar o processo de devolução para garantir conformidade com as políticas internas e minimizar perdas.
+
+### Pré-condições:
+* O sistema de vendas deve estar funcional e integrado com a funcionalidade de devoluções.
+* O operador deve ter permissão para registrar devoluções.
+
+### Pós-condições:
+* O produto devolvido é removido do estoque, e o cliente recebe um reembolso ou troca, conforme o caso.
+* O sistema registra a devolução para controle interno e análise.
+
+### Questões em aberto:
+* O sistema permite devoluções parciais (de um ou mais itens de uma compra)?
+* O sistema trata automaticamente o estorno no caso de pagamentos por cartão?
+
+### Fluxo Principal:
+
+1. O cliente solicita a devolução de um ou mais produtos.
+2. [IN] O operador acessa a funcionalidade de devoluções no sistema.
+3. [OUT] O sistema solicita os detalhes da compra original (ex.: número da nota fiscal, data da compra).
+4. [IN] O operador insere as informações da compra ou escaneia o código de barras do produto.
+5. [OUT] O sistema verifica os produtos elegíveis para devolução.
+6. [IN] O operador seleciona o produto a ser devolvido e o motivo da devolução.
+7. [OUT] O sistema atualiza o estoque e registra a devolução.
+8. [IN] O operador confirma se será emitido um reembolso ou troca.
+9. [OUT] O sistema emite um comprovante de devolução.
+
+### Variantes:
+
+**6.1 Devolução parcial**  
+6.1.1. O cliente solicita a devolução de apenas um ou alguns itens da compra.  
+6.1.2. O sistema permite que o operador selecione apenas os produtos devolvidos, mantendo os outros itens no histórico da venda.
+
+**8.1 Reembolso em dinheiro**  
+8.1.1. O cliente solicita o reembolso em dinheiro.  
+8.1.2. O operador confirma o valor a ser devolvido.  
+8.1.3. O sistema registra o reembolso e o operador entrega o valor ao cliente.
+
+**8.2 Reembolso por cartão**  
+8.2.1. O cliente solicita o estorno no cartão de crédito ou débito.  
+8.2.2. O sistema comunica a operadora de cartões para efetuar o estorno.  
+8.2.3. O sistema confirma o estorno e o cliente recebe o comprovante.
+
+### Exceções:
+
+* **E1**: Produto fora do prazo de devolução.  
+  1. O sistema informa que o produto excedeu o prazo permitido para devolução.  
+  2. O operador comunica o cliente sobre as políticas da loja e oferece alternativas, como troca ou reparo.
+
+* **E2**: Falha no estorno de cartão.  
+  1. O sistema informa que houve uma falha
+
+ ao tentar processar o estorno.  
+  2. O operador tenta novamente ou oferece outro método de reembolso ao cliente.
+
+* **E3**: Produto não elegível para devolução.  
+  1. O sistema informa que o produto não pode ser devolvido (ex.: produtos em promoção final, danificados por mau uso).  
+  2. O operador informa o cliente sobre as restrições e, se aplicável, oferece alternativas como troca ou reparo.
