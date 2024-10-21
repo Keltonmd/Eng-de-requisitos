@@ -16,6 +16,11 @@
 ## Visão Geral
 
 ## Requisitos
+1. Gerenciar Estoque
+2. Gerenciar Funcionarios
+3. Gestão de Fornecedores
+4. Gerenciar Caixa
+5. Gerenciar Relatorios
 
 ## Requisitos Não Funcionais
 
