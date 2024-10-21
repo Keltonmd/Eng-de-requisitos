@@ -25,25 +25,27 @@
 
 ## Requisitos Suplementares
 
-## Casos de Uso
+## 4. Casos de Uso
 
-### 1. Nome do Caso de Uso: Gerenciar Funcionários
+## UC01.
 
-### 2. Atores
+### Nome do Caso de Uso: Gerenciar Funcionários
+
+### Atores
 - **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover funcionários.
 
-### 3. Descrição
+### Descrição
 Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os funcionários da loja.
 
-### 4. Pré-condições
+### Pré-condições
 - O gerente deve estar autenticado no sistema.
 - O gerente deve ter permissões adequadas para realizar operações de gerenciamento de funcionários.
 
-### 5. Pós-condições
+### Pós-condições
 - As informações do funcionário são atualizadas no sistema.
 - O funcionário é adicionado ou removido do sistema, conforme a operação realizada.
 
-### 6. Fluxo Principal
+### Fluxo Principal
 1. **Adicionar Funcionário**
    - [IN] O gerente seleciona a opção "Adicionar Funcionário".
    - [OUT] O sistema exibe um formulário para cadastro de funcionário.
@@ -76,17 +78,81 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
    - [OUT] O sistema remove o funcionário da lista.
    - [OUT] O sistema exibe uma mensagem de confirmação.
 
-### 7. Fluxo Alternativo
+### Fluxo Alternativo
 - **Erro ao Adicionar Funcionário**
   - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
 
 - **Erro ao Remover Funcionário**
   - [OUT] Se houver um erro durante a remoção (ex: funcionário com registros pendentes), o sistema exibe uma mensagem de erro informando o motivo.
 
-### 8. Requisitos Não Funcionais
+### Requisitos Não Funcionais
 - O sistema deve ser responsivo e permitir que o gerente gerencie os funcionários de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
+---
+## UC02
+### Nome do Caso de Uso
+Gerenciar Fornecedores
+
+### Atores
+- **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover fornecedores.
+
+### Descrição
+Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os fornecedores da loja de sorvetes.
+
+### Pré-condições
+- O gerente deve estar autenticado no sistema.
+- O gerente deve ter permissões adequadas para realizar operações de gerenciamento de fornecedores.
+
+### Pós-condições
+- As informações do fornecedor são atualizadas no sistema.
+- O fornecedor é adicionado ou removido do sistema, conforme a operação realizada.
+
+### Fluxo Principal
+1. **Adicionar Fornecedor**
+   - [IN] O gerente seleciona a opção "Adicionar Fornecedor".
+   - [OUT] O sistema exibe um formulário para cadastro de fornecedor.
+   - [IN] O gerente preenche as informações necessárias (nome, telefone, e-mail).
+   - [IN] O gerente clica em "Salvar".
+   - [OUT] O sistema valida as informações e adiciona o fornecedor à lista.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
+
+2. **Editar Fornecedor**
+   - [IN] O gerente seleciona a opção "Gerenciar Fornecedores".
+   - [OUT] O sistema exibe uma lista de fornecedores cadastrados.
+   - [IN] O gerente escolhe um fornecedor da lista e clica em "Editar".
+   - [OUT] O sistema exibe um formulário com as informações do fornecedor.
+   - [IN] O gerente modifica as informações necessárias e clica em "Salvar".
+   - [OUT] O sistema valida as informações e atualiza os dados do fornecedor.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
+
+3. **Visualizar Fornecedor**
+   - [IN] O gerente seleciona a opção "Gerenciar Fornecedores".
+   - [OUT] O sistema exibe uma lista de fornecedores cadastrados.
+   - [IN] O gerente escolhe um fornecedor da lista e clica em "Visualizar".
+   - [OUT] O sistema exibe as informações detalhadas do fornecedor.
+
+4. **Remover Fornecedor**
+   - [IN] O gerente seleciona a opção "Gerenciar Fornecedores".
+   - [OUT] O sistema exibe uma lista de fornecedores cadastrados.
+   - [IN] O gerente escolhe um fornecedor da lista e clica em "Remover".
+   - [OUT] O sistema solicita confirmação da remoção.
+   - [IN] O gerente confirma a remoção.
+   - [OUT] O sistema remove o fornecedor da lista.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
+
+### Fluxo Alternativo
+- **Erro ao Adicionar Fornecedor**
+  - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
+
+- **Erro ao Remover Fornecedor**
+  - [OUT] Se houver um erro durante a remoção (ex: fornecedor associado a produtos), o sistema exibe uma mensagem de erro informando o motivo.
+
+### Requisitos Não Funcionais
+- O sistema deve ser responsivo e permitir que o gerente gerencie os fornecedores de maneira intuitiva.
+- As mensagens de confirmação e erro devem ser claras e informativas.
+
+---
 
 ## Expansão de caso de uso crítico
 
