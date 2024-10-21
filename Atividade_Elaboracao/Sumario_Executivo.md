@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sistema de Gestão de Sorveteria
 ## Sumário
 1. [VISÃO GERAL DO SISTEMA](#1-visão-geral-do-sistema)
