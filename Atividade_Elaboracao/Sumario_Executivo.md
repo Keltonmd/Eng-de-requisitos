@@ -402,6 +402,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 
 ## Modelo conceitual
+![DiagramaSeq4](Diagramas/Modelo_Conceitual.svg)
 
 ## Diagrama de classes
 
