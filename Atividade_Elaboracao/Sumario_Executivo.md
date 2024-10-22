@@ -231,7 +231,7 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 - O sistema deve ser responsivo e permitir que o gerente gerencie os fornecedores de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
-
+![UCfornecedor](Diagramas/UCfornecedor.png)
 
 ---
 
