@@ -502,3 +502,5 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 ## 8. Diagrama de classes
 ### Venda
 ![DiagramaSeq4](Diagramas/Diagrama%20de%20classes.svg)
+### Reabastecimento de Estoque
+![DiagramaSeq4](Diagramas/diagrama%20de%20classes2.svg)
