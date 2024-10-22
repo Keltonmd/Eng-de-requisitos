@@ -372,7 +372,34 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ## Expansão de caso de uso crítico
 
+
+
 ## Diagrama de sequência
+
+   ### Funcinários.
+     
+![DiagramaSeq1](Diagramas/DiagramaSeq1.png)
+
+---
+
+   ### Fornecedors.
+     
+![DiagramaSeq2](Diagramas/DiagramaSeq2.png)
+
+---
+
+   ### Estoque.
+     
+![DiagramaSeq3](Diagramas/DiagramaSeq3.png)
+
+
+---
+
+   ### Caixa
+     
+![DiagramaSeq4](Diagramas/DiagramaSeq4.png)
+
+
 
 ## Modelo conceitual
 
