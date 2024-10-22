@@ -1,24 +1,27 @@
 # Sistema de Gestão de Sorveteria
 ## Sumário
 1. [VISÃO GERAL DO SISTEMA](#1-visão-geral-do-sistema)
-2. [LEVANTAMENTO DE REQUISITOS](#3-levantamento-de-requisitos)
+2. [LEVANTAMENTO DE REQUISITOS](#2-levantamento-de-requisitos)
 
-   2.1. [REQUISITOS FUNCIONAIS](#31-requisitos-funcionais)
+   2.1. [REQUISITOS FUNCIONAIS](#21-requisitos-funcionais)
    
-   2.2. [REQUISITOS NÃO FUNCIONAIS](#32-requisitos-não-funcionais)
+   2.2. [REQUISITOS NÃO FUNCIONAIS](#22-requisitos-não-funcionais)
    
-3. [DETALHAMENTO DE REQUISITOS](#4-detalhamento-de-requisitos)
-4. [CASOS DE USO](#5-casos-de-uso)
-5. [DIAGRAMA DE SEQUÊNCUA ](#6-diagramas-de-sequência)
-6. [
+3. [DETALHAMENTO DE REQUISITOS](#3-detalhamento-de-requisitos)
+4. [CASOS DE USO](#3-casos-de-uso)
+5. [DIAGRAMA DE SEQUÊNCiA ](#5-diagramas-de-sequência)
+6. [MODELO CONCEITUAL](#6-modelo-conceitual)
 
-## Visão Geral
+
+# 1. Visão Geral
 
 ## Requisitos
 1. Gerenciar Estoque
 2. Gerenciar Funcionarios
 3. Gestão de Fornecedores
 4. Gerenciar Caixa
+
+# 2.
 
 ## Requisitos Não Funcionais
 1. O sistema deve registrar a entrada e saida de estoque.
@@ -103,7 +106,7 @@
 
 ---
 
-## 4. Casos de Uso
+# 4. Casos de Uso
 
 ## UC01.
 
@@ -302,7 +305,7 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 
 ---
 
-# UC04
+## UC04
 
 ### Nome do Caso de Uso: Gerenciar Caixa
 
@@ -453,6 +456,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 5. **Usabilidade:** A interface deve ser intuitiva e responsiva, adaptando-se para diferentes dispositivos (desktop e mobile). Mensagens de confirmação e erro devem ser claras e objetivas, auxiliando o usuário na correção de problemas.
 
 ---
+# 5. Diagrama de sequência
 
 ## Diagrama de sequência para o caso de uso expandido;
 
@@ -485,7 +489,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 
 
-## Modelo conceitual
+# 6. Modelo conceitual
 ![DiagramaSeq4](Diagramas/Modelo_Conceitual.svg)
 
 ## Diagrama de classes
