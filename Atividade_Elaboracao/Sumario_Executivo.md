@@ -370,7 +370,89 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 ---
 
 
-## Expansão de caso de uso crítico
+# Caso de Uso Crítico Expandido: Gerenciar Estoque
+
+**Nome do Caso de Uso:** Gerenciar Estoque  
+**Ator Principal:** Gerente  
+**Objetivo:** Permitir que o gerente adicione, edite, visualize e remova itens do estoque da loja de sorvetes.
+
+---
+
+## Fluxo Principal
+
+### 1. Adicionar Item ao Estoque
+1. **[IN]** O gerente seleciona a opção "Adicionar Item ao Estoque".
+   - **Exceção 1:** Se o sistema não conseguir acessar o banco de dados, o sistema exibe uma mensagem de erro ("Erro ao conectar ao banco de dados. Tente novamente mais tarde").
+2. **[OUT]** O sistema exibe um formulário de cadastro de item.
+   - **Exceção 2:** Se o formulário não carregar corretamente, o sistema exibe uma mensagem de erro ("Erro ao carregar o formulário").
+3. **[IN]** O gerente preenche as informações necessárias (nome, quantidade, preço, fornecedor).
+   - **Cenário Alternativo:** O gerente pode preencher apenas os campos obrigatórios, deixando campos opcionais vazios, como "descrição".
+4. **[IN]** O gerente clica em "Salvar".
+   - **Exceção 3:** Se os dados inseridos estiverem incorretos (por exemplo, quantidade negativa ou preço inválido), o sistema exibe uma mensagem de erro destacando os campos problemáticos ("Verifique os campos preenchidos: Quantidade e Preço precisam ser valores positivos").
+5. **[OUT]** O sistema valida as informações e adiciona o item ao estoque.
+  - **Cenário Alternativo:** Se o item já estiver cadastrado no estoque, o sistema alerta o gerente e pergunta se ele deseja atualizar o item existente ao invés de adicionar um novo ("Item já existente. Deseja atualizar as informações?").
+6. **[OUT]** O sistema exibe uma mensagem de sucesso confirmando o cadastro do item ("Item adicionado com sucesso ao estoque").|
+---
+
+### 2. Editar Item do Estoque
+1. **[IN]** O gerente seleciona a opção "Gerenciar Estoque".
+2. **[OUT]** O sistema exibe uma lista de itens cadastrados no estoque.
+   - **Exceção 4:** Se não houver itens cadastrados no estoque, o sistema exibe uma mensagem de aviso ("Não há itens cadastrados no momento").
+3. **[IN]** O gerente seleciona um item e clica em "Editar".
+4. **[OUT]** O sistema exibe um formulário pré-preenchido com as informações atuais do item.
+   - **Exceção 5:** Se o item estiver em um estado de "bloqueio" (por exemplo, sendo utilizado em uma venda ativa), o sistema impede a edição e exibe uma mensagem ("Este item está atualmente em uso e não pode ser editado").
+5. **[IN]** O gerente modifica as informações e clica em "Salvar".
+   - **Exceção 6:** Se algum valor modificado estiver incorreto (por exemplo, o preço for zerado), o sistema exibe um alerta ("Preço deve ser maior que 0").
+6. **[OUT]** O sistema valida as novas informações e atualiza o item no estoque.
+7. **[OUT]** O sistema exibe uma mensagem de sucesso confirmando a atualização do item ("Item atualizado com sucesso").
+
+---
+
+### 3. Visualizar Item do Estoque
+1. **[IN]** O gerente seleciona a opção "Gerenciar Estoque".
+2. **[OUT]** O sistema exibe uma lista de itens cadastrados no estoque.
+3. **[IN]** O gerente escolhe um item da lista e clica em "Visualizar".
+4. **[OUT]** O sistema exibe as informações detalhadas do item, incluindo nome, quantidade atual, preço, e fornecedor.
+
+---
+
+### 4. Remover Item do Estoque
+1. **[IN]** O gerente seleciona a opção "Gerenciar Estoque".
+2. **[OUT]** O sistema exibe uma lista de itens cadastrados no estoque.
+3. **[IN]** O gerente escolhe um item e clica em "Remover".
+4. **[OUT]** O sistema solicita confirmação ("Tem certeza que deseja remover o item X do estoque?").
+   - **Cenário Alternativo:** Se o item estiver associado a uma venda ativa ou pendente, o sistema impede a remoção e exibe uma mensagem de erro ("Este item está vinculado a uma venda pendente e não pode ser removido").
+5. **[IN]** O gerente confirma a remoção.
+   - **Exceção 7:** Se ocorrer um erro no banco de dados durante a tentativa de remoção, o sistema exibe uma mensagem de falha ("Erro ao remover o item. Tente novamente mais tarde").
+6. **[OUT]** O sistema remove o item do estoque e exibe uma mensagem de confirmação ("Item removido com sucesso").
+
+---
+
+## Fluxos Alternativos
+
+### Erro ao Adicionar Item
+- **Causa:** Campos obrigatórios não preenchidos ou dados inválidos.
+- **Resolução:** O sistema destaca os campos problemáticos e exibe mensagens informativas ("O campo Nome do Produto é obrigatório").
+
+### Erro ao Editar Item
+- **Causa:** Tentativa de editar um item bloqueado por estar associado a uma venda ou operação pendente.
+- **Resolução:** O sistema exibe uma mensagem explicando o motivo do bloqueio ("Este item está sendo utilizado em uma venda e não pode ser editado no momento").
+
+### Erro ao Remover Item
+- **Causa:** Item associado a uma venda ativa.
+- **Resolução:** O sistema impede a remoção e explica a dependência com a venda.
+
+---
+
+## Requisitos Não Funcionais Expandidos
+
+1. **Desempenho:** O sistema deve processar as operações de gerenciamento de estoque (inclusão, edição e remoção) em menos de 2 segundos para garantir fluidez no uso.
+2. **Segurança:** Todas as ações realizadas no estoque (adição, edição e remoção de itens) devem ser registradas em um log de auditoria com as seguintes informações: usuário (gerente), ação realizada, data e hora, item afetado.
+3. **Escalabilidade:** O sistema deve ser capaz de lidar com um volume grande de itens (até 10.000 itens cadastrados) sem perda de desempenho, mesmo em dispositivos móveis.
+4. **Resiliência:** O sistema deve ser capaz de lidar com falhas de conexão temporárias, permitindo que o gerente continue a operação após a reconexão sem perda de dados.
+5. **Usabilidade:** A interface deve ser intuitiva e responsiva, adaptando-se para diferentes dispositivos (desktop e mobile). Mensagens de confirmação e erro devem ser claras e objetivas, auxiliando o usuário na correção de problemas.
+
+---
 
 
 
