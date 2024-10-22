@@ -171,7 +171,7 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 
 ---
 ## UC02
-### Nome do Caso de Uso Gerenciar Fornecedores
+### Nome do Caso de Uso: Gerenciar Fornecedores
 
 ### Atores
 - **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover fornecedores.
@@ -234,6 +234,138 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 ![UCfornecedor0](Diagramas/UCfornecedor0.png)
 
 ---
+
+## UC03 
+
+# Caso de Uso: Gerenciar Estoque
+
+### Nome do Caso de Uso
+ Gerenciar Estoque 
+
+### Atores
+ **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover itens do estoque. 
+
+### Descrição
+ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os itens disponíveis no estoque da loja de sorvetes. 
+
+### Pré-condições
+ O gerente deve estar autenticado no sistema. 
+ O gerente deve ter permissões adequadas para realizar operações de gerenciamento de estoque. 
+
+### Pós-condições
+ As informações do item são atualizadas no sistema. 
+ O item é adicionado ou removido do estoque, conforme a operação realizada. 
+
+### Fluxo Principal
+1. **Adicionar Item ao Estoque**
+   -  O gerente seleciona a opção "Adicionar Item ao Estoque". 
+   -  O sistema exibe um formulário para cadastro de item. 
+   -  O gerente preenche as informações necessárias (nome do produto, quantidade, preço, fornecedor). 
+   -  O gerente clica em "Salvar". 
+   -  O sistema valida as informações e adiciona o item ao estoque. 
+   -  O sistema exibe uma mensagem de confirmação. 
+
+2. **Editar Item do Estoque**
+   -  O gerente seleciona a opção "Gerenciar Estoque". 
+   -  O sistema exibe uma lista de itens cadastrados no estoque. 
+   -  O gerente escolhe um item da lista e clica em "Editar". 
+   -  O sistema exibe um formulário com as informações do item. 
+   -  O gerente modifica as informações necessárias e clica em "Salvar". 
+   -  O sistema valida as informações e atualiza os dados do item. 
+   -  O sistema exibe uma mensagem de confirmação. 
+
+3. **Visualizar Item do Estoque**
+   -  O gerente seleciona a opção "Gerenciar Estoque". 
+   -  O sistema exibe uma lista de itens cadastrados no estoque. 
+   -  O gerente escolhe um item da lista e clica em "Visualizar". 
+   -  O sistema exibe as informações detalhadas do item. 
+
+4. **Remover Item do Estoque**
+   -  O gerente seleciona a opção "Gerenciar Estoque". 
+   -  O sistema exibe uma lista de itens cadastrados no estoque. 
+   -  O gerente escolhe um item da lista e clica em "Remover". 
+   -  O sistema solicita confirmação da remoção. 
+   -  O gerente confirma a remoção. 
+   -  O sistema remove o item do estoque. 
+   -  O sistema exibe uma mensagem de confirmação. 
+
+### Fluxo Alternativo
+- **Erro ao Adicionar Item**
+  -  Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção. 
+
+- **Erro ao Remover Item**
+  -  Se houver um erro durante a remoção (ex: item associado a vendas pendentes), o sistema exibe uma mensagem de erro informando o motivo. 
+
+### Requisitos Não Funcionais
+ O sistema deve ser responsivo e permitir que o gerente gerencie o estoque de maneira intuitiva. 
+ As mensagens de confirmação e erro devem ser claras e informativas. 
+ 
+---
+
+# UC04
+
+### Nome do Caso de Uso: Gerenciar Caixa
+
+### Atores
+**Gerente**: Usuário com permissão para realizar operações de abertura, fechamento e controle de caixa.
+
+### Descrição
+Este caso de uso permite que o gerente do sistema gerencie as operações de caixa, incluindo a abertura e o fechamento do caixa, além de registrar entradas e saídas de dinheiro.
+
+### Pré-condições
+- O gerente deve estar autenticado no sistema.
+- O gerente deve ter permissões adequadas para realizar operações de gerenciamento de caixa.
+
+### Pós-condições
+- O caixa é aberto ou fechado corretamente, registrando as informações necessárias.
+- As entradas e saídas de dinheiro são registradas e atualizadas no sistema.
+
+### Fluxo Principal
+1. **Abrir Caixa**
+   - O gerente seleciona a opção "Abrir Caixa".
+   - O sistema exibe um formulário para registrar a abertura do caixa.
+   - O gerente preenche as informações necessárias (data, valor inicial).
+   - O gerente clica em "Salvar".
+   - O sistema valida as informações e registra a abertura do caixa.
+   - O sistema exibe uma mensagem de confirmação.
+
+2. **Fechar Caixa**
+   - O gerente seleciona a opção "Fechar Caixa".
+   - O sistema exibe um formulário para registrar o fechamento do caixa.
+   - O gerente insere o valor total encontrado no caixa.
+   - O gerente clica em "Salvar".
+   - O sistema valida as informações e registra o fechamento do caixa.
+   - O sistema exibe uma mensagem de confirmação.
+
+3. **Registrar Entrada de Dinheiro**
+   - O gerente seleciona a opção "Registrar Entrada".
+   - O sistema exibe um formulário para registrar a entrada.
+   - O gerente preenche as informações necessárias (valor, descrição).
+   - O gerente clica em "Salvar".
+   - O sistema valida as informações e registra a entrada no caixa.
+   - O sistema exibe uma mensagem de confirmação.
+
+4. **Registrar Saída de Dinheiro**
+   - O gerente seleciona a opção "Registrar Saída".
+   - O sistema exibe um formulário para registrar a saída.
+   - O gerente preenche as informações necessárias (valor, descrição).
+   - O gerente clica em "Salvar".
+   - O sistema valida as informações e registra a saída do caixa.
+   - O sistema exibe uma mensagem de confirmação.
+
+### Fluxo Alternativo
+- **Erro ao Fechar Caixa**
+  - Se o valor encontrado no fechamento não corresponder ao esperado, o sistema exibe uma mensagem de erro informando o motivo.
+
+### Requisitos Não Funcionais
+- O sistema deve ser responsivo e permitir que o gerente gerencie o caixa de maneira intuitiva.
+- As mensagens de confirmação e erro devem ser claras e informativas.
+
+![UCcaixa](Diagramas/UCcaixa.png)
+
+
+---
+
 
 ## Expansão de caso de uso crítico
 
