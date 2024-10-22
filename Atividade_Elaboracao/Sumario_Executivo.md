@@ -384,7 +384,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
    ### Fornecedors.
      
-![DiagramaSeq2](Diagramas/DiagramaSeq2.png)
+![DiagramaSeq02](Diagramas/DiagramaSeq02.png)
 
 ---
 
