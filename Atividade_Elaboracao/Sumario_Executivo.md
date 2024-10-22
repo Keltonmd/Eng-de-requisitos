@@ -167,6 +167,8 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 - O sistema deve ser responsivo e permitir que o gerente gerencie os funcionários de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
+![UCfuncionario](Diagramas/UCfuncionario.png)
+
 ---
 ## UC02
 ### Nome do Caso de Uso
