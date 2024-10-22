@@ -297,7 +297,7 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 - O sistema deve ser responsivo e permitir que o gerente gerencie o estoque de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
-![UCestoque](Diagramas/UCestoque.png)
+![Ucestoque](Diagramas/Ucestoque.png)
 
 
 ---
