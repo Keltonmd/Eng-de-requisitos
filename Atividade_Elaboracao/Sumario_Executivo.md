@@ -485,7 +485,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
    ### Caixa
      
-![DiagramaSeq4](Diagramas/DiagramaSeq4.png)
+![DiagramaSeq6](Diagramas/DiagramaSeq6.png)
 
 
 
