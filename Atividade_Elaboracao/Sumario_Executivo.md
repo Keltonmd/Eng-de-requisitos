@@ -237,69 +237,69 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 
 ## UC03 
 
-# Caso de Uso: Gerenciar Estoque
-
-### Nome do Caso de Uso
- Gerenciar Estoque 
+### Nome do Caso de Uso: Gerenciar Estoque 
 
 ### Atores
- **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover itens do estoque. 
+- **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover itens do estoque.
 
 ### Descrição
- Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os itens disponíveis no estoque da loja de sorvetes. 
+Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os itens disponíveis no estoque da loja de sorvetes.
 
 ### Pré-condições
- O gerente deve estar autenticado no sistema. 
- O gerente deve ter permissões adequadas para realizar operações de gerenciamento de estoque. 
+- O gerente deve estar autenticado no sistema.
+- O gerente deve ter permissões adequadas para realizar operações de gerenciamento de estoque.
 
 ### Pós-condições
- As informações do item são atualizadas no sistema. 
- O item é adicionado ou removido do estoque, conforme a operação realizada. 
+- As informações do item são atualizadas no sistema.
+- O item é adicionado ou removido do estoque, conforme a operação realizada.
 
 ### Fluxo Principal
 1. **Adicionar Item ao Estoque**
-   -  O gerente seleciona a opção "Adicionar Item ao Estoque". 
-   -  O sistema exibe um formulário para cadastro de item. 
-   -  O gerente preenche as informações necessárias (nome do produto, quantidade, preço, fornecedor). 
-   -  O gerente clica em "Salvar". 
-   -  O sistema valida as informações e adiciona o item ao estoque. 
-   -  O sistema exibe uma mensagem de confirmação. 
+   - [IN] O gerente seleciona a opção "Adicionar Item ao Estoque".
+   - [OUT] O sistema exibe um formulário para cadastro de item.
+   - [IN] O gerente preenche as informações necessárias (nome do produto, quantidade, preço, fornecedor).
+   - [IN] O gerente clica em "Salvar".
+   - [OUT] O sistema valida as informações e adiciona o item ao estoque.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
 
 2. **Editar Item do Estoque**
-   -  O gerente seleciona a opção "Gerenciar Estoque". 
-   -  O sistema exibe uma lista de itens cadastrados no estoque. 
-   -  O gerente escolhe um item da lista e clica em "Editar". 
-   -  O sistema exibe um formulário com as informações do item. 
-   -  O gerente modifica as informações necessárias e clica em "Salvar". 
-   -  O sistema valida as informações e atualiza os dados do item. 
-   -  O sistema exibe uma mensagem de confirmação. 
+   - [IN] O gerente seleciona a opção "Gerenciar Estoque".
+   - [OUT] O sistema exibe uma lista de itens cadastrados no estoque.
+   - [IN] O gerente escolhe um item da lista e clica em "Editar".
+   - [OUT] O sistema exibe um formulário com as informações do item.
+   - [IN] O gerente modifica as informações necessárias e clica em "Salvar".
+   - [OUT] O sistema valida as informações e atualiza os dados do item.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
 
 3. **Visualizar Item do Estoque**
-   -  O gerente seleciona a opção "Gerenciar Estoque". 
-   -  O sistema exibe uma lista de itens cadastrados no estoque. 
-   -  O gerente escolhe um item da lista e clica em "Visualizar". 
-   -  O sistema exibe as informações detalhadas do item. 
+   - [IN] O gerente seleciona a opção "Gerenciar Estoque".
+   - [OUT] O sistema exibe uma lista de itens cadastrados no estoque.
+   - [IN] O gerente escolhe um item da lista e clica em "Visualizar".
+   - [OUT] O sistema exibe as informações detalhadas do item.
 
 4. **Remover Item do Estoque**
-   -  O gerente seleciona a opção "Gerenciar Estoque". 
-   -  O sistema exibe uma lista de itens cadastrados no estoque. 
-   -  O gerente escolhe um item da lista e clica em "Remover". 
-   -  O sistema solicita confirmação da remoção. 
-   -  O gerente confirma a remoção. 
-   -  O sistema remove o item do estoque. 
-   -  O sistema exibe uma mensagem de confirmação. 
+   - [IN] O gerente seleciona a opção "Gerenciar Estoque".
+   - [OUT] O sistema exibe uma lista de itens cadastrados no estoque.
+   - [IN] O gerente escolhe um item da lista e clica em "Remover".
+   - [OUT] O sistema solicita confirmação da remoção.
+   - [IN] O gerente confirma a remoção.
+   - [OUT] O sistema remove o item do estoque.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
 
 ### Fluxo Alternativo
 - **Erro ao Adicionar Item**
-  -  Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção. 
+  - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
 
 - **Erro ao Remover Item**
-  -  Se houver um erro durante a remoção (ex: item associado a vendas pendentes), o sistema exibe uma mensagem de erro informando o motivo. 
+  - [OUT] Se houver um erro durante a remoção (ex: item associado a vendas pendentes), o sistema exibe uma mensagem de erro informando o motivo.
 
 ### Requisitos Não Funcionais
- O sistema deve ser responsivo e permitir que o gerente gerencie o estoque de maneira intuitiva. 
- As mensagens de confirmação e erro devem ser claras e informativas. 
- 
+- O sistema deve ser responsivo e permitir que o gerente gerencie o estoque de maneira intuitiva.
+- As mensagens de confirmação e erro devem ser claras e informativas.
+
+![UCestoque](Diagramas/UCestoque.png)
+
+
 ---
 
 # UC04
@@ -322,40 +322,43 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ### Fluxo Principal
 1. **Abrir Caixa**
-   - O gerente seleciona a opção "Abrir Caixa".
-   - O sistema exibe um formulário para registrar a abertura do caixa.
-   - O gerente preenche as informações necessárias (data, valor inicial).
-   - O gerente clica em "Salvar".
-   - O sistema valida as informações e registra a abertura do caixa.
-   - O sistema exibe uma mensagem de confirmação.
+   - [IN] O gerente seleciona a opção "Abrir Caixa".
+   - [OUT] O sistema exibe um formulário para registrar a abertura do caixa.
+   - [IN] O gerente preenche as informações necessárias (data, valor inicial).
+   - [IN] O gerente clica em "Salvar".
+   - [OUT] O sistema valida as informações e registra a abertura do caixa.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
 
 2. **Fechar Caixa**
-   - O gerente seleciona a opção "Fechar Caixa".
-   - O sistema exibe um formulário para registrar o fechamento do caixa.
-   - O gerente insere o valor total encontrado no caixa.
-   - O gerente clica em "Salvar".
-   - O sistema valida as informações e registra o fechamento do caixa.
-   - O sistema exibe uma mensagem de confirmação.
+   - [IN] O gerente seleciona a opção "Fechar Caixa".
+   - [OUT] O sistema exibe um formulário para registrar o fechamento do caixa.
+   - [IN] O gerente insere o valor total encontrado no caixa.
+   - [IN] O gerente clica em "Salvar".
+   - [OUT] O sistema valida as informações e registra o fechamento do caixa.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
 
 3. **Registrar Entrada de Dinheiro**
-   - O gerente seleciona a opção "Registrar Entrada".
-   - O sistema exibe um formulário para registrar a entrada.
-   - O gerente preenche as informações necessárias (valor, descrição).
-   - O gerente clica em "Salvar".
-   - O sistema valida as informações e registra a entrada no caixa.
-   - O sistema exibe uma mensagem de confirmação.
+   - [IN] O gerente seleciona a opção "Registrar Entrada".
+   - [OUT] O sistema exibe um formulário para registrar a entrada.
+   - [IN] O gerente preenche as informações necessárias (valor, descrição).
+   - [IN] O gerente clica em "Salvar".
+   - [OUT] O sistema valida as informações e registra a entrada no caixa.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
 
 4. **Registrar Saída de Dinheiro**
-   - O gerente seleciona a opção "Registrar Saída".
-   - O sistema exibe um formulário para registrar a saída.
-   - O gerente preenche as informações necessárias (valor, descrição).
-   - O gerente clica em "Salvar".
-   - O sistema valida as informações e registra a saída do caixa.
-   - O sistema exibe uma mensagem de confirmação.
+   - [IN] O gerente seleciona a opção "Registrar Saída".
+   - [OUT] O sistema exibe um formulário para registrar a saída.
+   - [IN] O gerente preenche as informações necessárias (valor, descrição).
+   - [IN] O gerente clica em "Salvar".
+   - [OUT] O sistema valida as informações e registra a saída do caixa.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
 
 ### Fluxo Alternativo
+- **Erro ao Abrir Caixa**
+  - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
+
 - **Erro ao Fechar Caixa**
-  - Se o valor encontrado no fechamento não corresponder ao esperado, o sistema exibe uma mensagem de erro informando o motivo.
+  - [OUT] Se o valor encontrado no fechamento não corresponder ao esperado, o sistema exibe uma mensagem de erro informando o motivo.
 
 ### Requisitos Não Funcionais
 - O sistema deve ser responsivo e permitir que o gerente gerencie o caixa de maneira intuitiva.
