@@ -171,8 +171,7 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 
 ---
 ## UC02
-### Nome do Caso de Uso
-Gerenciar Fornecedores
+### Nome do Caso de Uso Gerenciar Fornecedores
 
 ### Atores
 - **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover fornecedores.
@@ -231,6 +230,8 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 ### Requisitos Não Funcionais
 - O sistema deve ser responsivo e permitir que o gerente gerencie os fornecedores de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
+
+
 
 ---
 
