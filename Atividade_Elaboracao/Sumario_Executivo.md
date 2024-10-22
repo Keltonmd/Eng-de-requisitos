@@ -489,8 +489,15 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 
 
-# 6. Modelo conceitual
+## 6. Modelo conceitual
 ![DiagramaSeq4](Diagramas/Modelo_Conceitual.svg)
 
-## Diagrama de classes
+## 7. Diagrama de comunicação
+### Venda
+![DiagramaSeq4](Diagramas/Diagrama_de_Comunicacao.svg)
+### Reabastecimento de Estoque
+![DiagramaSeq4](Diagramas/Diagrama%20de%20comunicação2.svg)
+
+
+## 8. Diagrama de classes
 
