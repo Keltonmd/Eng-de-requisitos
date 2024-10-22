@@ -454,7 +454,9 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
+## Diagrama de sequência para o caso de uso expandido;
 
+![DiagramaEx](Diagramas/DiagramaSeqEx.png)
 
 ## Diagrama de sequência
 
