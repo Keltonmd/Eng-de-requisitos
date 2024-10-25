@@ -380,29 +380,30 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-## Caso de Uso Expandido - UC03: Gerenciar Estoque
-### Ator(es):
+## Caso de Uso Expandido
+### UC03: Gerenciar Estoque
+#### Ator(es):
 - Gerente: Responsável por gerenciar o estoque e garantir a disponibilidade dos produtos.
 - Sistema de Estoque: Ferramenta que armazena, processa e exibe as informações de itens em estoque.
 - Fornecedor: Fornece os produtos que serão adicionados ao estoque (envolvido indiretamente).
-### Interessado(s) e Interesse(s):
+#### Interessado(s) e Interesse(s):
 - Gerente: Garantir o controle adequado dos produtos em estoque, evitando faltas e excessos.
 - Fornecedor: Fornecer produtos de forma contínua e garantir a reposição de itens.
 - Sistema de Estoque: Armazenar e processar corretamente as informações de produtos e fornecer relatórios e alertas sobre a situação do estoque.
-### Pré-condições:
+#### Pré-condições:
 - O sistema de estoque deve estar funcionando corretamente.
 - O gerente deve estar autenticado e com as permissões necessárias para gerenciar o estoque.
 - O estoque deve possuir um catálogo de produtos previamente registrado no sistema.
-### Pós-condições:
+#### Pós-condições:
 - O item foi adicionado, editado, removido ou atualizado no sistema.
 - O sistema registrou as transações de gerenciamento de estoque.
 - O gerente recebeu alertas de estoque baixo, se aplicável.
 - Relatórios de fornecedores foram gerados, se solicitado.
-### Questões em Aberto:
+#### Questões em Aberto:
 - Quais são os limites de quantidade para gerar um alerta de estoque baixo?
 - O sistema deve registrar informações adicionais sobre fornecedores (por exemplo, histórico de entregas)?
 - Existe a necessidade de gerar um relatório periódico de movimentações de estoque?
-### Fluxo Principal:
+#### Fluxo Principal:
 1. O gerente acessa a seção de "Gerenciar Estoque" no sistema.
 2. [IN] O gerente seleciona uma das opções: adicionar, editar, visualizar ou remover um item do estoque.
 3. [OUT] O sistema exibe um formulário com os campos necessários (nome do item, quantidade, preço, fornecedor, etc.).
@@ -411,7 +412,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 6. [IN] O gerente confirma a operação (adicionar, atualizar ou remover).
 7. [OUT] O sistema registra a transação e atualiza o estado do estoque.
 8. [OUT] Se aplicável, o sistema verifica o nível de estoque e exibe alertas de "Estoque Baixo" para o gerente.
-### Variantes:
+#### Variantes:
 - Adicionar Item ao Estoque 1.1. O gerente seleciona "Adicionar Item". 1.2. O sistema exibe o formulário de adição de item. 1.3. O gerente insere as informações do produto. 1.4. O sistema registra o novo item no estoque.
 
 - Editar Item no Estoque 2.1. O gerente seleciona "Editar Item". 2.2. O sistema exibe o formulário com os dados atuais do produto. 2.3. O gerente altera as informações desejadas. 2.4. O sistema atualiza os dados no estoque.
@@ -420,7 +421,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 - Gerar Relatório de Histórico de Fornecedores 4.1. O gerente seleciona "Gerar Relatório de Fornecedores". 4.2. O sistema coleta os dados de fornecedores e histórico de transações. 4.3. O sistema gera e exibe o relatório para o gerente.
 
-### Exceções:
+#### Exceções:
 - E1: Falha na Validação dos Dados do Produto:
 
    - O sistema detecta que campos obrigatórios não foram preenchidos ou valores são inválidos.
@@ -441,9 +442,96 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
    - O sistema não consegue gerar o relatório solicitado.
    - O gerente é informado sobre a falha e sugerido a tentar novamente ou contatar o suporte.
 
-### Fluxo de Alternativa:
+#### Fluxo de Alternativa:
 -  Erro ao Adicionar ou Atualizar Produto
    - Se houver erro no cadastro ou atualização (como dados inconsistentes), o sistema exibe uma mensagem de erro e solicita correção.
+---
+
+### UC04 - Gerenciar Caixa
+#### Atores
+- Gerente: Usuário responsável por realizar as operações de abertura, fechamento e controle de entradas e saídas de dinheiro no caixa.
+#### Interessados e Interesses
+- Gerente: Deseja garantir o controle eficiente do fluxo de caixa, incluindo a abertura, fechamento e registro de movimentações financeiras.
+- Sistema: Deve registrar e gerenciar com precisão as operações de caixa, garantindo a integridade dos dados financeiros.
+#### Pré-condições
+- O gerente deve estar autenticado no sistema com permissões adequadas para gerenciar o caixa.
+- O sistema deve estar em pleno funcionamento.
+#### Pós-condições
+- O caixa é aberto ou fechado com sucesso, com as informações registradas no sistema.
+- Entradas e saídas de dinheiro são devidamente registradas, mantendo o saldo do caixa atualizado.
+#### Questões em Aberto
+- Há limites para os valores de abertura e fechamento do caixa?
+- O sistema deve alertar o gerente sobre possíveis inconsistências nas entradas e saídas?
+#### Fluxo Principal
+1. Abrir Caixa
+
+   - [IN] O gerente acessa a funcionalidade de abertura de caixa.
+   - [OUT] O sistema exibe o formulário de abertura de caixa.
+   - [IN] O gerente insere as informações requeridas, como data e valor inicial.
+   - [IN] O gerente confirma a operação clicando em "Salvar".
+   - [OUT] O sistema valida os dados e realiza a abertura do caixa.
+   - [OUT] O sistema exibe uma mensagem de confirmação da operação.
+
+2. Fechar Caixa
+
+   - [IN] O gerente acessa a funcionalidade de fechamento de caixa.
+   - [OUT] O sistema exibe o formulário de fechamento de caixa.
+   - [IN] O gerente insere o valor total encontrado no caixa.
+   - [IN] O gerente confirma a operação clicando em "Salvar".
+   - [OUT] O sistema valida os dados e realiza o fechamento do caixa, registrando as movimentações.
+   - [OUT] O sistema exibe uma mensagem de confirmação da operação.
+
+3. Registrar Entrada de Dinheiro
+
+   - [IN] O gerente acessa a funcionalidade de registrar entrada de dinheiro.
+   - [OUT] O sistema exibe um formulário para registrar a entrada.
+   - [IN] O gerente preenche os campos necessários, como valor e descrição da entrada.
+   - [IN] O gerente confirma a operação clicando em "Salvar".
+   - [OUT] O sistema valida as informações e registra a entrada no caixa.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
+
+4. Registrar Saída de Dinheiro
+
+   - [IN] O gerente acessa a funcionalidade de registrar saída de dinheiro.
+   - [OUT] O sistema exibe um formulário para registrar a saída.
+   - [IN] O gerente preenche os campos necessários, como valor e descrição da saída.
+   - [IN] O gerente confirma a operação clicando em "Salvar".
+   - [OUT] O sistema valida as informações e registra a saída no caixa.
+   - [OUT] O sistema exibe uma mensagem de confirmação.
+   
+#### Fluxo Alternativo
+- Erro ao Abrir Caixa
+   - [OUT] Se o gerente deixar algum campo obrigatório vazio, o sistema exibe uma mensagem de erro, solicitando que os campos sejam preenchidos corretamente.
+- Erro ao Fechar Caixa
+
+   - [OUT] Se houver uma discrepância entre o valor informado pelo gerente e o valor esperado, o sistema exibe uma mensagem de erro, informando a diferença e solicitando a revisão dos dados.
+#### Variantes
+- Registro de Ajustes no Caixa
+   - O gerente pode realizar ajustes no valor de abertura ou fechamento do caixa caso ocorra um erro de digitação ou se houver uma diferença detectada durante a contagem final.
+   - [IN] O gerente acessa a funcionalidade de ajustes.
+   - [OUT] O sistema exibe um formulário para correção de valores.
+   - [IN] O gerente preenche o valor correto e confirma.
+   - [OUT] O sistema valida o ajuste e atualiza o saldo do caixa.
+#### Exceções
+- E1: Falha no sistema ao abrir o caixa
+
+   - [OUT] O sistema exibe uma mensagem de erro técnico.
+   - [IN] O gerente pode tentar novamente ou contactar o suporte.
+- E2: Inconsistência nos valores ao fechar o caixa
+
+   - [OUT] O sistema exibe uma mensagem de alerta indicando discrepâncias.
+   - [IN] O gerente revisa as entradas e saídas e pode corrigir o valor final.
+- E3: Falha ao registrar entrada/saída
+
+   - [OUT] Se o sistema não registrar a movimentação corretamente, uma mensagem de erro é exibida.
+   - [IN] O gerente pode tentar novamente ou relatar o problema ao suporte.
+#### Requisitos Não Funcionais
+- O sistema deve ser acessível em dispositivos móveis e desktops.
+- As operações de caixa devem ser realizadas de forma intuitiva e rápida.
+- O sistema deve gerar relatórios detalhados de caixa, acessíveis para auditoria.
+- As mensagens de erro e confirmação devem ser claras e compreensíveis.
+
+
 ---
 ## 5. Diagrama de sequência
 
