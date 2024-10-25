@@ -117,14 +117,14 @@
 #### Nome do Caso de Uso: Gerenciar Funcionários
 
 #### Atores
-- **Gerente**: Administradores do Sistema, Funcionários autorizados e Gerentes de Recursos Humanos.
+- **RH**: Administradores do Sistema, Funcionários autorizados e Gerentes de Recursos Humanos.
 
 #### Descrição
 Este caso de uso permite que o funcionário autorizado do sistema adicione, edite, visualize e remova informações sobre os funcionários da loja.
 
 #### Pré-condições
-- O funcionario deve estar autenticado no sistema.
-- O funcionario deve ter permissões adequadas para realizar operações de gerenciamento de funcionários.
+- O RH deve estar autenticado no sistema.
+- O RH deve ter permissões adequadas para realizar operações de gerenciamento de funcionários.
 
 #### Pós-condições
 - As informações do funcionário são atualizadas no sistema.
@@ -181,14 +181,14 @@ Este caso de uso permite que o funcionário autorizado do sistema adicione, edit
 #### Nome do Caso de Uso: Gerenciar Fornecedores
 
 #### Atores
-- **Gerente**: Gerente de Compras, Gerente Financeiro, funcionarios autoriazados do estoque, gerente do estoque e admnistradores do sitema.
+- **Funcionário Autorizado**: Gerente de Compras, Gerente Financeiro, funcionarios autoriazados do estoque, gerente do estoque e admnistradores do sitema.
 
 #### Descrição
 Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os fornecedores da loja de sorvetes.
 
 #### Pré-condições
-- O gerente deve estar autenticado no sistema.
-- O gerente deve ter permissões adequadas para realizar operações de gerenciamento de fornecedores.
+- O Funcionário Autorizado deve estar autenticado no sistema.
+- O Funcionário Autorizado deve ter permissões adequadas para realizar operações de gerenciamento de fornecedores.
 
 #### Pós-condições
 - As informações do fornecedor são atualizadas no sistema.
@@ -291,6 +291,12 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
    - [OUT] O sistema remove o item do estoque.
    - [OUT] O sistema exibe uma mensagem de confirmação.
 
+5. **Alerta de Estoque baixo**
+   -[OUT] O sistema avisa estoque baixo de um determinado produto.
+
+6. **Gerar Relatorio**
+   -[OUT] Gerar Relatorio do historico com fornecedor.
+
 #### Fluxo Alternativo
 - **Erro ao Adicionar Item**
   - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
@@ -305,7 +311,6 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 
 ### Caso de uso que representa a Gerencia de Estoque, Fornecedores e Funcionarios.
 ![Ucestoque](Diagramas/Caso%20de%20Uso.svg)
-
 
 ---
 
@@ -462,32 +467,12 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ### Diagrama de sequência para o caso de uso expandido;
 
-![DiagramaEx](Diagramas/DiagramaSeqEx.png)
+![DiagramaEx](Diagramas/diagramaSeq-estoque.svg)
 
-### Diagrama de sequência
-
-   #### Funcinários.
-     
-![DiagramaSeq1](Diagramas/DiagramaSeq1.png)
-
----
-
-   #### Fornecedors.
-     
-![DiagramaSeq02](Diagramas/DiagramaSeq02.png)
-
----
-
-   #### Estoque.
-     
-![DiagramaSeq3](Diagramas/DiagramaSeq3.png)
-
-
----
 
    #### Caixa
      
-![DiagramaSeq6](Diagramas/DiagramaSeq6.png)
+![DiagramaSeq6](Diagramas/diagramaSeq-Venda.svg)
 
 
 
