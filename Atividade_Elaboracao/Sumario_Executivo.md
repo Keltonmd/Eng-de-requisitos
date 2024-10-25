@@ -383,7 +383,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ## 5. Caso de Uso Expandido
 
-### UC03: Gerenciar Estoque
+### UC Expandido 03: Gerenciar Estoque
 #### Ator(es):
 - Gerente: Responsável por gerenciar o estoque e garantir a disponibilidade dos produtos.
 - Sistema de Estoque: Ferramenta que armazena, processa e exibe as informações de itens em estoque.
@@ -449,7 +449,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
    - Se houver erro no cadastro ou atualização (como dados inconsistentes), o sistema exibe uma mensagem de erro e solicita correção.
 ---
 
-### UC04 - Gerenciar Caixa
+### UC Expandido 04 - Gerenciar Caixa
 #### Atores
 - Gerente: Usuário responsável por realizar as operações de abertura, fechamento e controle de entradas e saídas de dinheiro no caixa.
 #### Interessados e Interesses
