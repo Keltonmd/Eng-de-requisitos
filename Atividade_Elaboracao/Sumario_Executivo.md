@@ -13,17 +13,17 @@
 6. [MODELO CONCEITUAL](#6-modelo-conceitual)
 
 
-# 1. Visão Geral
+## 1. Visão Geral
 
-## Requisitos
+## 2. LEVANTAMENTO DE REQUISITOS
+
+### Requisitos
 1. Gerenciar Estoque
 2. Gerenciar Funcionarios
 3. Gestão de Fornecedores
 4. Gerenciar Caixa
 
-# 2.
-
-## Requisitos Não Funcionais
+### Requisitos Não Funcionais
 1. O sistema deve registrar a entrada e saida de estoque.
 
 2. O sistema deve fornecer aviso de estoque baixo automaticamente quando um produto atingir o limite mínimo configurado.
@@ -54,14 +54,14 @@
 
 15. O sistema deve gerar relatórios financeiros detalhados após o fechamento do caixa, mostrando total de vendas, forma de pagamento, e divergências de valores (se houver).
 
-## Requisitos Suplementares
+### Requisitos Suplementares
 1. O sistema deve operar via plataforma desktop.
 2. O sistema deve utilizar o banco de dados postgres.
 3. O sistema deve utilizar a linguagem Java.
 4. O sistema deve utilzar o Spring Security para realizar a segurança de acesso.
 5. O sistema deve gerar relatorios por meio da biblioteca JasperReports.
 
-## Detalhamento dos Requisitos
+## 3. Detalhamento dos Requisitos
 | **RF1. Gerenciar Estoque** |
 |:---|
 | **Descrição:**<br>Este requisito estabelece a necessidade de um sistema abrangente para o gerenciamento de estoque da sorveteria, que permita o controle eficiente de entradas e saídas de produtos. O sistema deve garantir a precisão nas informações de estoque, possibilitando um acompanhamento em tempo real da quantidade disponível. Além disso, deve incluir funcionalidades para monitorar a validade dos produtos e emitir alertas automáticos quando os níveis de estoque atingirem limites críticos, evitando desperdícios e assegurando a disponibilidade de produtos para os clientes.|
@@ -106,27 +106,27 @@
 
 ---
 
-# 4. Casos de Uso
+## 4. Casos de Uso
 
-## UC01.
+### UC01.
 
-### Nome do Caso de Uso: Gerenciar Funcionários
+#### Nome do Caso de Uso: Gerenciar Funcionários
 
-### Atores
+#### Atores
 - **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover funcionários.
 
-### Descrição
+#### Descrição
 Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os funcionários da loja.
 
-### Pré-condições
+#### Pré-condições
 - O gerente deve estar autenticado no sistema.
 - O gerente deve ter permissões adequadas para realizar operações de gerenciamento de funcionários.
 
-### Pós-condições
+#### Pós-condições
 - As informações do funcionário são atualizadas no sistema.
 - O funcionário é adicionado ou removido do sistema, conforme a operação realizada.
 
-### Fluxo Principal
+#### Fluxo Principal
 1. **Adicionar Funcionário**
    - [IN] O gerente seleciona a opção "Adicionar Funcionário".
    - [OUT] O sistema exibe um formulário para cadastro de funcionário.
@@ -159,38 +159,38 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
    - [OUT] O sistema remove o funcionário da lista.
    - [OUT] O sistema exibe uma mensagem de confirmação.
 
-### Fluxo Alternativo
+#### Fluxo Alternativo
 - **Erro ao Adicionar Funcionário**
   - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
 
 - **Erro ao Remover Funcionário**
   - [OUT] Se houver um erro durante a remoção (ex: funcionário com registros pendentes), o sistema exibe uma mensagem de erro informando o motivo.
 
-### Requisitos Não Funcionais
+#### Requisitos Não Funcionais
 - O sistema deve ser responsivo e permitir que o gerente gerencie os funcionários de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
 ![UCfuncionario](Diagramas/UCfuncionario.png)
 
 ---
-## UC02
-### Nome do Caso de Uso: Gerenciar Fornecedores
+### UC02
+#### Nome do Caso de Uso: Gerenciar Fornecedores
 
-### Atores
+#### Atores
 - **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover fornecedores.
 
-### Descrição
+#### Descrição
 Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os fornecedores da loja de sorvetes.
 
-### Pré-condições
+#### Pré-condições
 - O gerente deve estar autenticado no sistema.
 - O gerente deve ter permissões adequadas para realizar operações de gerenciamento de fornecedores.
 
-### Pós-condições
+#### Pós-condições
 - As informações do fornecedor são atualizadas no sistema.
 - O fornecedor é adicionado ou removido do sistema, conforme a operação realizada.
 
-### Fluxo Principal
+#### Fluxo Principal
 1. **Adicionar Fornecedor**
    - [IN] O gerente seleciona a opção "Adicionar Fornecedor".
    - [OUT] O sistema exibe um formulário para cadastro de fornecedor.
@@ -223,14 +223,14 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
    - [OUT] O sistema remove o fornecedor da lista.
    - [OUT] O sistema exibe uma mensagem de confirmação.
 
-### Fluxo Alternativo
+#### Fluxo Alternativo
 - **Erro ao Adicionar Fornecedor**
   - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
 
 - **Erro ao Remover Fornecedor**
   - [OUT] Se houver um erro durante a remoção (ex: fornecedor associado a produtos), o sistema exibe uma mensagem de erro informando o motivo.
 
-### Requisitos Não Funcionais
+#### Requisitos Não Funcionais
 - O sistema deve ser responsivo e permitir que o gerente gerencie os fornecedores de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
@@ -238,25 +238,25 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 
 ---
 
-## UC03 
+### UC03 
 
-### Nome do Caso de Uso: Gerenciar Estoque 
+#### Nome do Caso de Uso: Gerenciar Estoque 
 
-### Atores
+#### Atores
 - **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover itens do estoque.
 
-### Descrição
+#### Descrição
 Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os itens disponíveis no estoque da loja de sorvetes.
 
-### Pré-condições
+#### Pré-condições
 - O gerente deve estar autenticado no sistema.
 - O gerente deve ter permissões adequadas para realizar operações de gerenciamento de estoque.
 
-### Pós-condições
+#### Pós-condições
 - As informações do item são atualizadas no sistema.
 - O item é adicionado ou removido do estoque, conforme a operação realizada.
 
-### Fluxo Principal
+#### Fluxo Principal
 1. **Adicionar Item ao Estoque**
    - [IN] O gerente seleciona a opção "Adicionar Item ao Estoque".
    - [OUT] O sistema exibe um formulário para cadastro de item.
@@ -289,14 +289,14 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
    - [OUT] O sistema remove o item do estoque.
    - [OUT] O sistema exibe uma mensagem de confirmação.
 
-### Fluxo Alternativo
+#### Fluxo Alternativo
 - **Erro ao Adicionar Item**
   - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
 
 - **Erro ao Remover Item**
   - [OUT] Se houver um erro durante a remoção (ex: item associado a vendas pendentes), o sistema exibe uma mensagem de erro informando o motivo.
 
-### Requisitos Não Funcionais
+#### Requisitos Não Funcionais
 - O sistema deve ser responsivo e permitir que o gerente gerencie o estoque de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
@@ -305,25 +305,25 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 
 ---
 
-## UC04
+### UC04
 
-### Nome do Caso de Uso: Gerenciar Caixa
+#### Nome do Caso de Uso: Gerenciar Caixa
 
-### Atores
+#### Atores
 **Gerente**: Usuário com permissão para realizar operações de abertura, fechamento e controle de caixa.
 
-### Descrição
+#### Descrição
 Este caso de uso permite que o gerente do sistema gerencie as operações de caixa, incluindo a abertura e o fechamento do caixa, além de registrar entradas e saídas de dinheiro.
 
-### Pré-condições
+#### Pré-condições
 - O gerente deve estar autenticado no sistema.
 - O gerente deve ter permissões adequadas para realizar operações de gerenciamento de caixa.
 
-### Pós-condições
+#### Pós-condições
 - O caixa é aberto ou fechado corretamente, registrando as informações necessárias.
 - As entradas e saídas de dinheiro são registradas e atualizadas no sistema.
 
-### Fluxo Principal
+#### Fluxo Principal
 1. **Abrir Caixa**
    - [IN] O gerente seleciona a opção "Abrir Caixa".
    - [OUT] O sistema exibe um formulário para registrar a abertura do caixa.
@@ -356,24 +356,22 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
    - [OUT] O sistema valida as informações e registra a saída do caixa.
    - [OUT] O sistema exibe uma mensagem de confirmação.
 
-### Fluxo Alternativo
+#### Fluxo Alternativo
 - **Erro ao Abrir Caixa**
   - [OUT] Se o gerente não preencher todos os campos obrigatórios, o sistema exibe uma mensagem de erro e solicita correção.
 
 - **Erro ao Fechar Caixa**
   - [OUT] Se o valor encontrado no fechamento não corresponder ao esperado, o sistema exibe uma mensagem de erro informando o motivo.
 
-### Requisitos Não Funcionais
+#### Requisitos Não Funcionais
 - O sistema deve ser responsivo e permitir que o gerente gerencie o caixa de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
 ![UCcaixa](Diagramas/UCcaixa.png)
 
-
 ---
 
-
-# Caso de Uso Crítico Expandido: Gerenciar Estoque
+### Caso de Uso Crítico Expandido: Gerenciar Estoque
 
 **Nome do Caso de Uso:** Gerenciar Estoque  
 **Ator Principal:** Gerente  
@@ -381,9 +379,9 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-## Fluxo Principal
+#### Fluxo Principal
 
-### 1. Adicionar Item ao Estoque
+##### 1. Adicionar Item ao Estoque
 1. **[IN]** O gerente seleciona a opção "Adicionar Item ao Estoque".
    - **Exceção 1:** Se o sistema não conseguir acessar o banco de dados, o sistema exibe uma mensagem de erro ("Erro ao conectar ao banco de dados. Tente novamente mais tarde").
 2. **[OUT]** O sistema exibe um formulário de cadastro de item.
@@ -397,7 +395,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 6. **[OUT]** O sistema exibe uma mensagem de sucesso confirmando o cadastro do item ("Item adicionado com sucesso ao estoque").|
 ---
 
-### 2. Editar Item do Estoque
+##### 2. Editar Item do Estoque
 1. **[IN]** O gerente seleciona a opção "Gerenciar Estoque".
 2. **[OUT]** O sistema exibe uma lista de itens cadastrados no estoque.
    - **Exceção 4:** Se não houver itens cadastrados no estoque, o sistema exibe uma mensagem de aviso ("Não há itens cadastrados no momento").
@@ -411,7 +409,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-### 3. Visualizar Item do Estoque
+##### 3. Visualizar Item do Estoque
 1. **[IN]** O gerente seleciona a opção "Gerenciar Estoque".
 2. **[OUT]** O sistema exibe uma lista de itens cadastrados no estoque.
 3. **[IN]** O gerente escolhe um item da lista e clica em "Visualizar".
@@ -419,7 +417,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-### 4. Remover Item do Estoque
+##### 4. Remover Item do Estoque
 1. **[IN]** O gerente seleciona a opção "Gerenciar Estoque".
 2. **[OUT]** O sistema exibe uma lista de itens cadastrados no estoque.
 3. **[IN]** O gerente escolhe um item e clica em "Remover".
@@ -431,23 +429,23 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-## Fluxos Alternativos
+### Fluxos Alternativos
 
-### Erro ao Adicionar Item
+##### Erro ao Adicionar Item
 - **Causa:** Campos obrigatórios não preenchidos ou dados inválidos.
 - **Resolução:** O sistema destaca os campos problemáticos e exibe mensagens informativas ("O campo Nome do Produto é obrigatório").
 
-### Erro ao Editar Item
+#### Erro ao Editar Item
 - **Causa:** Tentativa de editar um item bloqueado por estar associado a uma venda ou operação pendente.
 - **Resolução:** O sistema exibe uma mensagem explicando o motivo do bloqueio ("Este item está sendo utilizado em uma venda e não pode ser editado no momento").
 
-### Erro ao Remover Item
+#### Erro ao Remover Item
 - **Causa:** Item associado a uma venda ativa.
 - **Resolução:** O sistema impede a remoção e explica a dependência com a venda.
 
 ---
 
-## Requisitos Não Funcionais Expandidos
+#### Requisitos Não Funcionais Expandidos
 
 1. **Desempenho:** O sistema deve processar as operações de gerenciamento de estoque (inclusão, edição e remoção) em menos de 2 segundos para garantir fluidez no uso.
 2. **Segurança:** Todas as ações realizadas no estoque (adição, edição e remoção de itens) devem ser registradas em um log de auditoria com as seguintes informações: usuário (gerente), ação realizada, data e hora, item afetado.
@@ -456,34 +454,34 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 5. **Usabilidade:** A interface deve ser intuitiva e responsiva, adaptando-se para diferentes dispositivos (desktop e mobile). Mensagens de confirmação e erro devem ser claras e objetivas, auxiliando o usuário na correção de problemas.
 
 ---
-# 5. Diagrama de sequência
+## 5. Diagrama de sequência
 
-## Diagrama de sequência para o caso de uso expandido;
+### Diagrama de sequência para o caso de uso expandido;
 
 ![DiagramaEx](Diagramas/DiagramaSeqEx.png)
 
-## Diagrama de sequência
+### Diagrama de sequência
 
-   ### Funcinários.
+   #### Funcinários.
      
 ![DiagramaSeq1](Diagramas/DiagramaSeq1.png)
 
 ---
 
-   ### Fornecedors.
+   #### Fornecedors.
      
 ![DiagramaSeq02](Diagramas/DiagramaSeq02.png)
 
 ---
 
-   ### Estoque.
+   #### Estoque.
      
 ![DiagramaSeq3](Diagramas/DiagramaSeq3.png)
 
 
 ---
 
-   ### Caixa
+   #### Caixa
      
 ![DiagramaSeq6](Diagramas/DiagramaSeq6.png)
 
