@@ -3,21 +3,25 @@
 1. [VISÃO GERAL DO SISTEMA](#1-visão-geral-do-sistema)
 2. [LEVANTAMENTO DE REQUISITOS](#2-levantamento-de-requisitos)
 
-   2.1. [REQUISITOS FUNCIONAIS](#21-requisitos-funcionais)
+   2.1. [REQUISITOS FUNCIONAIS](#requisitos)
    
-   2.2. [REQUISITOS NÃO FUNCIONAIS](#22-requisitos-não-funcionais)
+   2.2. [REQUISITOS NÃO FUNCIONAIS](#requisitos-não-funcionais)
    
-3. [DETALHAMENTO DE REQUISITOS](#3-detalhamento-de-requisitos)
-4. [CASOS DE USO](#3-casos-de-uso)
-5. [DIAGRAMA DE SEQUÊNCiA ](#5-diagramas-de-sequência)
+   2.3. [REQUISITOS SUPLEMENTARES](#requisitos-suplementares)
+3. [DETALHAMENTO DE REQUISITOS](#3-detalhamento-dos-requisitos)
+4. [CASOS DE USO](#4-casos-de-uso)
+5. [DIAGRAMA DE SEQUÊNCiA ](#5-diagrama-de-sequência)
 6. [MODELO CONCEITUAL](#6-modelo-conceitual)
+8. [DIAGRAMA DE COMUNICAÇÃO](#7-diagrama-de-comunicação)
+7. [DIAGRAMA DE CLASSES](#8-diagrama-de-classes)
+
 
 
 ## 1. Visão Geral
 
 ## 2. LEVANTAMENTO DE REQUISITOS
 
-### Requisitos
+## Requisitos
 1. Gerenciar Estoque
 2. Gerenciar Funcionarios
 3. Gestão de Fornecedores
@@ -65,7 +69,7 @@
 | **RF1. Gerenciar Estoque** |
 |:---|
 | **Descrição:**<br>Este requisito estabelece a necessidade de um sistema abrangente para o gerenciamento de estoque da sorveteria, que permita o controle eficiente de entradas e saídas de produtos. O sistema deve garantir a precisão nas informações de estoque, possibilitando um acompanhamento em tempo real da quantidade disponível. Além disso, deve incluir funcionalidades para monitorar a validade dos produtos e emitir alertas automáticos quando os níveis de estoque atingirem limites críticos, evitando desperdícios e assegurando a disponibilidade de produtos para os clientes.|
-| **Fontes:**<br>Departamento responsavel pelo estoue e feedback interno dos funcionarios|
+| **Fontes:**<br>Departamento responsavel pelo estoque e feedback interno dos funcionarios|
 | **Usuários:**<br>Funcionarios do estoque, Gerente ou Admnistrador do setor de estoque e Administradores do Sistema|
 | **Informações de entrada:**<br>Dados do Produto: Informações detalhadas sobre os produtos, incluindo nome, descrição, unidade de medida, quantidade inicial e data de validade.<br>Registro de Movimentações: Dados referentes a cada movimentação de estoque, como tipo de operação, quantidade movimentada, data da operação e identificação do usuário responsável pela ação. | 
 | **Informações de saída:**<br>Relatórios de Estoque: Documentos gerados que fornecem uma visão geral do estoque, incluindo quantidades disponíveis, produtos com validade próxima e um histórico detalhado de todas as movimentações.<br>Alertas de Estoque Crítico: Notificações automáticas que informam os usuários quando os níveis de estoque de produtos específicos estão abaixo do mínimo estabelecido, permitindo ações rápidas de reposição.<br>Avisos de Validade: Comunicações sobre produtos que estão próximos do vencimento, sugerindo ações como promoções ou descarte, a fim de minimizar perdas. |
