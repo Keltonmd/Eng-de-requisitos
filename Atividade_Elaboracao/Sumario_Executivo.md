@@ -498,7 +498,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
    - [IN] O gerente confirma a operação clicando em "Salvar".
    - [OUT] O sistema valida as informações e registra a saída no caixa.
    - [OUT] O sistema exibe uma mensagem de confirmação.
-   
+
 #### Fluxo Alternativo
 - Erro ao Abrir Caixa
    - [OUT] Se o gerente deixar algum campo obrigatório vazio, o sistema exibe uma mensagem de erro, solicitando que os campos sejam preenchidos corretamente.
@@ -517,30 +517,33 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
    - [OUT] O sistema exibe uma mensagem de erro técnico.
    - [IN] O gerente pode tentar novamente ou contactar o suporte.
+
 - E2: Inconsistência nos valores ao fechar o caixa
 
    - [OUT] O sistema exibe uma mensagem de alerta indicando discrepâncias.
    - [IN] O gerente revisa as entradas e saídas e pode corrigir o valor final.
+
 - E3: Falha ao registrar entrada/saída
 
    - [OUT] Se o sistema não registrar a movimentação corretamente, uma mensagem de erro é exibida.
    - [IN] O gerente pode tentar novamente ou relatar o problema ao suporte.
+
 #### Requisitos Não Funcionais
 - O sistema deve ser acessível em dispositivos móveis e desktops.
 - As operações de caixa devem ser realizadas de forma intuitiva e rápida.
 - O sistema deve gerar relatórios detalhados de caixa, acessíveis para auditoria.
 - As mensagens de erro e confirmação devem ser claras e compreensíveis.
 
-
 ---
+
 ## 5. Diagrama de sequência
 
-### Diagrama de sequência para o caso de uso expandido;
+### Diagrama de sequência para o caso de uso expandido Estoque;
 
 ![DiagramaEx](Diagramas/diagramaSeq-estoque.svg)
 
 
-   #### Caixa
+### Diagrama de sequência para o caso de uso expandido Caixa;
      
 ![DiagramaSeq6](Diagramas/diagramaSeq-Venda.svg)
 
