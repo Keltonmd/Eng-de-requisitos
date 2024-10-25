@@ -117,14 +117,14 @@
 #### Nome do Caso de Uso: Gerenciar Funcionários
 
 #### Atores
-- **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover funcionários.
+- **Gerente**: Administradores do Sistema, Funcionários autorizados e Gerentes de Recursos Humanos.
 
 #### Descrição
-Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os funcionários da loja.
+Este caso de uso permite que o funcionário autorizado do sistema adicione, edite, visualize e remova informações sobre os funcionários da loja.
 
 #### Pré-condições
-- O gerente deve estar autenticado no sistema.
-- O gerente deve ter permissões adequadas para realizar operações de gerenciamento de funcionários.
+- O funcionario deve estar autenticado no sistema.
+- O funcionario deve ter permissões adequadas para realizar operações de gerenciamento de funcionários.
 
 #### Pós-condições
 - As informações do funcionário são atualizadas no sistema.
@@ -171,17 +171,17 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
   - [OUT] Se houver um erro durante a remoção (ex: funcionário com registros pendentes), o sistema exibe uma mensagem de erro informando o motivo.
 
 #### Requisitos Não Funcionais
-- O sistema deve ser responsivo e permitir que o gerente gerencie os funcionários de maneira intuitiva.
-- As mensagens de confirmação e erro devem ser claras e informativas.
-
-![UCfuncionario](Diagramas/UCfuncionario.png)
+- RNF 4: O sistema deve cadastrar os funcionários por meio de níveis hierárquicos, definindo permissões adequadas de acordo com seus cargos na empresa.
+- RNF 5: Os funcionários devem se cadastrar no sistema utilizando CPF e senha, garantindo a identificação única e segura.
+- RNF 6: O sistema deve controlar as funções de cada funcionário e permitir acessos restritos conforme seu nível hierárquico e responsabilidades.
 
 ---
+
 ### UC02
 #### Nome do Caso de Uso: Gerenciar Fornecedores
 
 #### Atores
-- **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover fornecedores.
+- **Gerente**: Gerente de Compras, Gerente Financeiro, funcionarios autoriazados do estoque, gerente do estoque e admnistradores do sitema.
 
 #### Descrição
 Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os fornecedores da loja de sorvetes.
@@ -238,8 +238,6 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 - O sistema deve ser responsivo e permitir que o gerente gerencie os fornecedores de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
-![UCfornecedor0](Diagramas/UCfornecedor0.png)
-
 ---
 
 ### UC03 
@@ -247,7 +245,7 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 #### Nome do Caso de Uso: Gerenciar Estoque 
 
 #### Atores
-- **Gerente**: Usuário com permissão para adicionar, editar, visualizar e remover itens do estoque.
+- **Gerente**: Funcionarios autorizados do estoque, Gerente ou Admnistrador do setor de estoque e Administradores do Sistema
 
 #### Descrição
 Este caso de uso permite que o gerente do sistema adicione, edite, visualize e remova informações sobre os itens disponíveis no estoque da loja de sorvetes.
@@ -304,7 +302,9 @@ Este caso de uso permite que o gerente do sistema adicione, edite, visualize e r
 - O sistema deve ser responsivo e permitir que o gerente gerencie o estoque de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
-![Ucestoque](Diagramas/Ucestoque.png)
+
+### Caso de uso que representa a Gerencia de Estoque, Fornecedores e Funcionarios.
+![Ucestoque](Diagramas/Caso%20de%20Uso.svg)
 
 
 ---
@@ -371,7 +371,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 - O sistema deve ser responsivo e permitir que o gerente gerencie o caixa de maneira intuitiva.
 - As mensagens de confirmação e erro devem ser claras e informativas.
 
-![UCcaixa](Diagramas/UCcaixa.png)
+![UCcaixa](Diagramas/Caso%20de%20Uso%20Venda.svg)
 
 ---
 
