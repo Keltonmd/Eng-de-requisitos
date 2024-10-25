@@ -10,10 +10,11 @@
    2.3. [REQUISITOS SUPLEMENTARES](#requisitos-suplementares)
 3. [DETALHAMENTO DE REQUISITOS](#3-detalhamento-dos-requisitos)
 4. [CASOS DE USO](#4-casos-de-uso)
-5. [DIAGRAMA DE SEQUÊNCiA ](#5-diagrama-de-sequência)
-6. [MODELO CONCEITUAL](#6-modelo-conceitual)
-8. [DIAGRAMA DE COMUNICAÇÃO](#7-diagrama-de-comunicação)
-7. [DIAGRAMA DE CLASSES](#8-diagrama-de-classes)
+5. [CASO DE USO EXPANDIDO](#5-caso-de-uso-expandido)
+6. [DIAGRAMA DE SEQUÊNCiA](#6-diagrama-de-sequência)
+7. [MODELO CONCEITUAL](#7-modelo-conceitual)
+8. [DIAGRAMA DE COMUNICAÇÃO](#8-diagrama-de-comunicação)
+9. [DIAGRAMA DE CLASSES](#9-diagrama-de-classes)
 
 
 
@@ -380,7 +381,8 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-## Caso de Uso Expandido
+## 5. Caso de Uso Expandido
+
 ### UC03: Gerenciar Estoque
 #### Ator(es):
 - Gerente: Responsável por gerenciar o estoque e garantir a disponibilidade dos produtos.
@@ -536,7 +538,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-## 5. Diagrama de sequência
+## 6. Diagrama de sequência
 
 ### Diagrama de sequência para o caso de uso expandido Estoque;
 
@@ -549,12 +551,12 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-## 6. Modelo conceitual
+## 7. Modelo conceitual
 ![DiagramaSeq4](Diagramas/Modelo_Conceitual.svg)
 
 ---
 
-## 7. Diagrama de comunicação
+## 8. Diagrama de comunicação
 ### Venda
 ![DiagramaSeq4](Diagramas/Diagrama_de_Comunicacao.svg)
 ### Reabastecimento de Estoque
@@ -562,7 +564,7 @@ Este caso de uso permite que o gerente do sistema gerencie as operações de cai
 
 ---
 
-## 8. Diagrama de classes
+## 9. Diagrama de classes
 ### Venda
 ![DiagramaSeq4](Diagramas/Diagrama%20de%20classes.svg)
 ### Reabastecimento de Estoque
